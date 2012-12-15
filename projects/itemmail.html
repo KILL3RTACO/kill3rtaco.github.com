@@ -20,7 +20,27 @@
 			</ul>
 		</div>
 		<div id='main'>
-			
+			<h2>About</h2>
+			<p>
+				The idea for ItemMail came to me whilst playing on my regular server, <a href='http://ww.imdeity.com'>imdeity.com</a>.
+				This server has many towns and shop, and at the time player trading was common. The problem was that usually these players
+				would to a town spawn, but could not decide which, or go to the server spawn and risk other players stealing they're items.
+				My idea was that through a simple command, player's would be able to 'send' items to another player, without the need to move.
+			</p>
+			<h2>History</h2>
+			<p>
+				In the first version of the plugin, I used a Java Object called a HashMap to store everyone's mail. I was a noob at programming
+				during this time, and I later realized that if the server was shut down or restarted/reloaded, everyone's mail would be gone. I
+				fixed this somewhat in the next version
+			</p>
+			<p>
+				In this version, I used MySQL databases to store the mail. It was something I really wanted to implement after learning the
+				disadvantages of HashMaps. MySql databases have two main advantages:
+			</p>
+			<ul>
+				<li>They are easy to manipulate</li>
+				<li>They are stored on a server, so even if the server went off the Mail is safe</li>
+			</ul>
 		</div>
 	</body>
 </html>
