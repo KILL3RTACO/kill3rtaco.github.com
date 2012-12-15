@@ -1,0 +1,19 @@
+html{
+	background-color: black;
+	color: white;
+	font-family: Ubuntu;
+}
+
+#main{
+	margin: 2% 10% 0 10%;
+	border: 1px white solid;
+}
+
+#main h1{
+	text-align: center;
+}
+
+#footer{
+	display: block;
+	background-color: #333;
+}
