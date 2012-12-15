@@ -41,6 +41,39 @@
 				<li>They are easy to manipulate</li>
 				<li>They are stored on a server, so even if the server went off the Mail is safe</li>
 			</ul>
+			<p>
+				However shortly after this advancement, Echantments were possible. The MySQL tables do not store Enchantment data. I am working
+				a way to hold that data. At the moment, however, any item sent with Echantments will lose their Echantment.
+			</p>
+			<h2>Sending Mail</h2>
+			<p>
+				The main feature of the plugin is sending mail. The syntax for the command is as follows:
+			</p>
+			<code>
+				/im send [player] [item:damage] [amount]
+			</code>
+			<h3>Parameter</h3>
+			<p>
+				This command has three different parameters.
+			</p>
+			<table>
+				<tr>
+					<th>Parameter</th>
+					<th>Required</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>[player]</td>
+					<td>yes</td>
+					<td>Defines who you're sending the items to.</td>
+				</tr>
+				<tr>
+					<td>[item:damage]</td>
+					<td>yes</td>
+					<td>Defines what you are sending. It can be the name of item, such as "bed", or the id of an item. You can specify
+						damage/data values as well, so you can send a specific type of wool/dye/log etc.</td>
+				</tr>
+			</table>
 		</div>
 	</body>
 </html>
