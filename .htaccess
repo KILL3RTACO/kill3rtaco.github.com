@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\ (INSERT FILE EXTENSION) -f
+RewriteRule ^(.*)$ $1 (INSERT FILE EXTENSION)
