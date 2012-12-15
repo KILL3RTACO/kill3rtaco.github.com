@@ -49,8 +49,10 @@ table{
 
 table th{
 	background-color: orange;
+	padding: 5px;
 }
 
 table td{
 	background-color: blue;
+	padding: 5px;
 }
