@@ -10,7 +10,8 @@ html{
 }
 
 #main p, #main ul, #main h2{
-	margin: 0 2% 0 2%;
+	margin-left: 2%;
+	margin-right: 2%;
 }
 
 h1{
@@ -35,8 +36,9 @@ code{
 	background-color: #2D2D2D;
 	display: block;
 	border: 1px dashed white;
-	padding: 5px;
-	margin: 0 2% 0 2%;
+	padding: 2px;
+	margin-left: 2%;
+	margin-right: 2%;
 }
 
 table{
