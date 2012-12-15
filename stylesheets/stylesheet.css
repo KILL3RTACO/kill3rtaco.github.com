@@ -9,7 +9,7 @@ html{
 	border: 1px white solid;
 }
 
-#main p, #main ul, #main h2{
+#main p, #main ul, #main h2, #main h3, #main h4, #main h5, #main h6{
 	margin-left: 2%;
 	margin-right: 2%;
 }
@@ -36,7 +36,7 @@ code{
 	background-color: #2D2D2D;
 	display: block;
 	border: 1px dashed white;
-	padding: 2px;
+	padding: 5px;
 	margin-left: 2%;
 	margin-right: 2%;
 }
