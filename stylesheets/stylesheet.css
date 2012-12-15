@@ -9,6 +9,11 @@ html{
 	border: 1px white solid;
 }
 
+#main p, #main ul, #main h2{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
 #main h1{
 	text-align: center;
 }
@@ -16,4 +21,13 @@ html{
 #footer{
 	display: block;
 	background-color: #333;
+}
+
+a:link, a:visited{
+	color: #59F;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
 }
