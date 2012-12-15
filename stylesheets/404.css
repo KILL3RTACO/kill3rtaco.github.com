@@ -1,12 +1,13 @@
 .big{
 	font-family: Ubuntu;
-	text-size: 500%;
-	margin-top: 20%;
-	margin: 0 auto;
+	font-size: 500%;
+	margin-top: 15%;
+	margin-bottom: 0;
+	text-align: center;
 }
 
 p{
 	font-family: Ubuntu;
-	text-size: 200%;
-	margin: 0 auto;
+	font-size: 200%;
+	text-align: center;
 }
