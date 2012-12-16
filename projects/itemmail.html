@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Taco - ItemMail</title>
-		<link  href='../stylesheets/stylesheet.css' rel='stylesheet' type='text/css'/>
-		<link  href='../stylesheets/menu.css' rel='stylesheet' type='text/css'/>
+		<link href='../stylesheets/stylesheet.css' rel='stylesheet' type='text/css'/>
+		<link href='../stylesheets/menu.css' rel='stylesheet' type='text/css'/>
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
@@ -20,14 +21,14 @@
 			</ul>
 		</div>
 		<div id='main'>
-			<h2>About</h2>
+			<h2 id='About'>About</h2>
 			<p>
 				The idea for ItemMail came to me whilst playing on my regular server, <a href='http://ww.imdeity.com'>imdeity.com</a>.
 				This server has many towns and shop, and at the time player trading was common. The problem was that usually these players
 				would to a town spawn, but could not decide which, or go to the server spawn and risk other players stealing they're items.
 				My idea was that through a simple command, player's would be able to 'send' items to another player, without the need to move.
 			</p>
-			<h2>History</h2>
+			<h2 id='History'>History</h2>
 			<p>
 				In the first version of the plugin, I used a Java Object called a HashMap to store everyone's mail. I was a noob at programming
 				during this time, and I later realized that if the server was shut down or restarted/reloaded, everyone's mail would be gone. I
@@ -45,14 +46,14 @@
 				However shortly after this advancement, Echantments were possible. The MySQL tables do not store Enchantment data. I am working
 				a way to hold that data. At the moment, however, any item sent with Echantments will lose their Echantment.
 			</p>
-			<h2>Sending Mail</h2>
+			<h2 id='Sending_Mail'>Sending Mail</h2>
 			<p>
 				The main feature of the plugin is sending mail. The syntax for the command is as follows:
 			</p>
 			<code>
 				/im send [player] [item:damage] [amount]
 			</code>
-			<h3>Parameters</h3>
+			<h3 id='Sending_Mail_Parameters'>Parameters</h3>
 			<p>
 				This command has three different parameters.
 			</p>
@@ -84,9 +85,117 @@
 					</td>
 				</tr>
 			</table>
+			<h2 id='Sending_Requests'>Sending Requests</h2>
 			<p>
-				
+				Requests are another feature in ItemMail where you can ask other players for mail. If the request is accepted, the requested items
+				will be sent to you as if they entered the command:
 			</p>
+			<code>
+				/im send [yourname] [requested-items]
+			</code>
+			<p>
+				However, if it is declined, the items will not be sent.
+			</p>
+			<p>
+				The syntax for the command to send a request is as follows:
+			</p>
+			<code>
+				/im req [name] [item:damage] [amount]
+			</code>
+			<h3 id='Sending_Requests_Parameters'>Parameters</h3>
+			<p>
+				This command has three different parameters.
+			</p>
+			<table>
+				<tr>
+					<th>Parameter</th>
+					<th>Required</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>[player]</td>
+					<td>yes</td>
+					<td>Defines who you are requesting the items from.</td>
+				</tr>
+				<tr>
+					<td>[item:damage]</td>
+					<td>yes</td>
+					<td>
+						Defines what you are requesting. It can be the name of item, such as "bed", or the id of an item. You can specify
+						damage/data values as well.
+					</td>
+				</tr>
+				<tr>
+					<td>[amount]</td>
+					<td>no</td>
+					<td>
+						Defines the amount of the item you are requesting (default: 1).
+					</td>
+				</tr>
+			</table>
+			<h2 id='Player_Mailboxes'>Player Mailboxes</h2>
+			<p>
+				Each player has two different Mailboxes: one that stores mail and another that stores requests. Each of these Mailboxes has
+				its own command to access. These mailboxes use a page system, so you always see a set number of mail on each page (unless
+				perhaps you are viewing the last page).
+			</p>
+			<h2 id='Accessing_Mail'>Accessing Mail</h2>
+			<p>
+				To see mail that was sent to you, type the command
+			</p>
+			<code>
+				/im [page]
+			</code>
+			<p>
+				The <span class='inline-code'>[page]</span> parameter defines which page you are viewing.
+			</p>
+			<h3 id='Opening_Mail'>Opening Mail</h3>
+			<p>
+				Mail sent to you doesn't have a use until you open it (duh). To open mail, type the command
+			</p>
+			<code>
+				/im open [#]
+			</code>
+			<p>
+				The <span class='inline-code'>[#]</span> parameter defines which mail to open. When viewing your mail, a number (starting
+				at 1) appears on the left of each item. For example, the first item will have an id of <span class='inline-code'>[1]</span>,
+				the second item will have an id of <span class='inline-code'>[2]</span>, and so on. Here is an example of what the mailbox looks
+				like when viewed:
+			</p>
+			<code>
+				--------------[ItemMail: Page 1 of 1]--------------<br/>
+				[1] FROM: Notch ITEMS: 25 CAKE<br/>
+				[2] FROM: Notch ITEMS: 85 DIAMOND<br/>
+				[3] FROM: Notch ITEMS: 10 IRON_INGOT<br/>
+				[4] FROM: Notch ITEMS: 1032 TNT<br/>
+				---------------------------------------------------
+			</code>
+			<p>
+				If in this case you wanted the diamonds, you would type
+			</p>
+			<code>
+				/im open 2
+			</code>
+			<p>
+				If you do not specify a number, the plugin will try to open the last mail sent to you. In this case, that would be the 
+				<span class='inline-code'>1032 TNT</span>. However if you give a number and that mail doesn't exist (or don't specify
+				a number and you have no mail in your mailbox), you will get an error message saying "That mail doesn't exist!";
+			</p>
+			<h3 id='Deleting_Mail'>Deleting Mail</h3>
+			<p>
+				But what if you don't want the mail? You can easily delete it with
+			</p>
+			<code>
+				/im delete [#/*]
+			</code>
+			<p>
+				If the last parameter is a number (and that mail exists) it will delete that mail. It does not actually 'delete' it from
+				the MySQL database (so admins can still see), but it marks it as read without giving you the items.
+			</p>
+			<p>
+				You can also delete all of your mail by 
+			</p>
+			<h2 id='Accessing_Mail'>Accessing Requests</h2>
 		</div>
 	</body>
 </html>
