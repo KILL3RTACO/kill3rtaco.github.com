@@ -48,6 +48,90 @@
 				However shortly after this advancement, Echantments were possible. The MySQL tables do not store Enchantment data. I am working
 				a way to hold that data. At the moment, however, any item sent with Echantments will lose their Echantment.
 			</p>
+			<h2 id='Command_Reference'>Command Reference</h2>
+			<table>
+				<tr>
+					<th>Command</th>
+					<th>Parameters</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>/im</td>
+					<td>[page]</td>
+					<td>Views mail at page <span class='inline-code'>[page]</span></td>
+				</tr>
+				<tr>
+					<td>/im reqs</td>
+					<td>[page]</td>
+					<td>Views requests at page <span class='inline-code'>[page]</span></td>
+				</tr>
+				<tr>
+					<th class='spanblue' colspan='3'>Mail</th>
+				</tr>
+				<tr>
+					<td>/im send</td>
+					<td>[receiver] [item:damage] [#]</td>
+					<td>Sends specified items to <span class='inline-code'>[receiver]</span>. Default amount: 1</td>
+				</tr>
+				<tr>
+					<td>/im open</td>
+					<td>[#]</td>
+					<td>Opens the specified mail</td>
+				</tr>
+				<tr>
+					<td>/im delete</td>
+					<td>[#/*]</td>
+					<td>Deletes specified mail</td>
+				</tr>
+				<tr>
+					<th class='spanblue' colspan='3'>Requests</th>
+				</tr>
+				<tr>
+					<td>/im req</td>
+					<td>[receiver] [item:damage] [#]</td>
+					<td>Sends a request to <span class='inline-code'>[receiver]</span> requesting for the specified items. Default amount: 1</td>
+				</tr>
+				<tr>
+					<td>/im decline</td>
+					<td>[#]</td>
+					<td>Declines the specified request</td>
+				</tr>
+				<tr>
+					<td>/im accept</td>
+					<td>[#]</td>
+					<td>Accepts the specified request</td>
+				</tr>
+			</table>
+			<h2 id='Permissions'>Permissions</h2>
+			<table>
+				<tr>
+					<th>Permission</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>ItemMail.action.send</td>
+					<td>Allows a player to send mail to another player</td>
+				</tr>
+				<tr>
+					<td>ItemMail.action.open</td>
+					<td>Allows a player to open mail</td>
+				</tr>
+				<tr>
+					<td>ItemMail.action.delete</td>
+					<td>Allows a player to delete mail</td>
+				</tr>
+				<tr>
+					<td>ItemMail.action.request</td>
+					<td>Allows a player to send a request to another player</td>
+				</tr>
+				<tr>
+					<td>ItemMail.action.accept</td>
+					<td>Allows a player to accept a request</td>
+				</tr>
+				<tr>
+					<td>ItemMail.action.decline</td>
+					<td>Allows a player to decline a request</td>
+			</table>
 			<h2 id='Sending_Mail'>Sending Mail</h2>
 			<p>
 				The main feature of the plugin is sending mail. The syntax for the command is as follows:
@@ -198,6 +282,42 @@
 				You can also delete all of your mail by using an asterisk (*) instead of a number.
 			</p>
 			<h2 id='Accessing_Requests'>Accessing Requests</h2>
+			<p>
+				Viewing your requests is much like viewing your mail. However the is an extra parameter:
+			</p>
+			<code>
+				/im reqs [page]
+			</code>
+			<p>
+				The parameter <span class='inline-code'>reqs</span> is required to view requests. Otherwise, you would be viewing your mail.
+			</p>
+			<h3 id='Accepting_Requests'>Accepting Requests</h3>
+			<p>
+				To accept a request, use the command
+			</p>
+			<code>
+				/im accept [#]
+			</code>
+			<p>
+				If you don't give a number, the plugin will try accept the last request sent to you. Accepting a request is the same thing as:
+			</p>
+			<code>
+				/im send [sender-of-request] [requested-items]
+			</code>
+			<h3 id='Declining_Requests'>Declining Requests</h3>
+			<p>
+				If you do not wish to accept a request, you can always decline it. To do this type the command
+			</p>
+			<code>
+				/im decline [#]
+			</code>
+			<p>
+				If you don't give a number, the plugin will decline the last request sent to you (if any).
+			</p>
+			<h2 id="See_Also">See Also</h2>
+			<ul style='list-style-type: none'>
+				<li><a href='http://dev.bukkit.org/server-mods/mail'>Mail</a> - A plugin to send private messages in-game</li>
+			</ul>
 		</div>
 	</body>
 </html>
