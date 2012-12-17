@@ -1,0 +1,88 @@
+html{
+	background-color: black;
+	color: white;
+	font-family: Ubuntu;
+}
+
+#main{
+	margin: 2% 10% 0 10%;
+	border: 1px solid #FFF;
+}
+
+#main p, #main ul, #main h2, #main h3, #main h4, #main h5, #main h6{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+#main h2{
+	border-bottom: 1px solid #AAA;
+}
+
+h1{
+	text-align: center;
+}
+
+#footer{
+	display: block;
+	background-color: #333;
+}
+
+a:link, a:visited{
+	color: #59F;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+code{
+	font-family: 'Ubuntu mono';
+	background-color: #2D2D2D;
+	display: block;
+	border: 1px dashed #FFF;
+	padding: 5px;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.inline-code{
+	font-family: 'Ubuntu mono';
+}
+
+.header{
+	margin-top: -22px;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+table{
+	width: 96%;
+	margin: auto;
+}
+
+table th{
+	background-color: #FC6;
+	color: #000;
+	padding: 5px;
+}
+
+table td{
+	background-color: #CCC;
+	color: #000;
+	padding: 5px;
+}
+
+.spanblue{
+	background-color: #0BF;
+	color: #000;
+	text-align: center;
+}
+
+.planned{
+	color: #0A0
+}
+
+p:first-letter{
+	padding-left: 3%;
+}
