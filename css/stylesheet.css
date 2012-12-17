@@ -86,3 +86,11 @@ table td{
 p:first-letter{
 	padding-left: 3%;
 }
+
+#wiki-toc{
+	
+}
+
+#wiki-toc a{
+	-webkit-transition: all 0.2s ease-out;
+}
