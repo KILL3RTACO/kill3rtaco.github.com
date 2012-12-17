@@ -88,7 +88,10 @@ p:first-letter{
 }
 
 #wiki-toc{
+	margin-left: 2%;
 	padding: 2%;
+	background-color: #AAA;
+	border: 1px solid #FFF;
 }
 
 #wiki-toc a{
