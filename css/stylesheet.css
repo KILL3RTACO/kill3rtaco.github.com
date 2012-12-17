@@ -90,6 +90,8 @@ p:first-letter{
 #wiki-toc{
 	margin-left: 2%;
 	padding-left: 2%;
+	padding-top: 1%;
+	padding-bottom: 1%;
 	background-color: #444;
 	border: 1px solid #AAA;
 }
