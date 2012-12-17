@@ -83,4 +83,6 @@ table td{
 	color: #0A0
 }
 
-#bac
+.wiki-paragrah:first-letter{
+	padding-left: 2%;
+}
