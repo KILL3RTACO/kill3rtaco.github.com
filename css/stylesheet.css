@@ -89,6 +89,7 @@ p:first-letter{
 
 #wiki-toc{
 	margin-left: 2%;
+	padding-left: 0;
 	padding-top: 1%;
 	padding-bottom: 1%;
 	background-color: #444;
@@ -100,9 +101,9 @@ p:first-letter{
 }
 
 .level-1{
-	padding-left: 2em;
+	padding-left: 1em;
 }
 
 .level-2{
-	padding-left: 4em;
+	padding-left: 2em;
 }
