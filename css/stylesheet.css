@@ -97,6 +97,14 @@ p:first-letter{
 	border: 1px solid #AAA;
 }
 
+.fancy{
+	margin: auto;
+}
+
+.fancy a{
+	text-decoration: none;
+}
+
 .level-1{
 	padding-left: 1em;
 }
