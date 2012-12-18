@@ -97,8 +97,9 @@ p:first-letter{
 	border: 1px solid #AAA;
 }
 
-div.fancy{
+.fancy{
 	display: block;
+	width: inherit;
 	margin: auto;
 }
 
