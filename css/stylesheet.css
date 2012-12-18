@@ -98,16 +98,11 @@ p:first-letter{
 }
 
 .fancy {
-	margin: 0 10% 0 10%;
-	border: 1px solid white;
-	background: #AAA;
+	display: block;
+	margin: auto;
 }
 
-.fancy div{
-	padding: 3px;
-}
-
-.fancy div a{
+.fancy a{
 	text-decoration: none;
 }
 
