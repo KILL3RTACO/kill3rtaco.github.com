@@ -98,7 +98,8 @@ p:first-letter{
 }
 
 .fancy img{
-	margin-right: 0;
+	display: block;
+	margin: auto;
 }
 
 .fancy a{
