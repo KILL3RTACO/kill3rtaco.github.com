@@ -98,7 +98,7 @@ p:first-letter{
 }
 
 .fancy img{
-	float: right;
+	margin-left: 100%;
 }
 
 .fancy a{
