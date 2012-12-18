@@ -11,7 +11,7 @@ $(document).ready(function() {
     .replace(/\/$/,'');
   }
   var locationPath = filterPath(location.pathname);
-  var scrollElem = scrollableElement('html', 'body');
+  var scrollElem = scrollableElement('html', 'body', 'div', 'a');
  
   $('a[href*=#]').each(function() {
     var thisPath = filterPath(this.pathname) || locationPath;
