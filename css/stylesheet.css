@@ -104,7 +104,7 @@ p:first-letter{
 }
 
 .fancy div{
-	margin: auto;
+	padding: 3px;
 }
 
 .fancy div a{
