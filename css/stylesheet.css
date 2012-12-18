@@ -98,12 +98,13 @@ p:first-letter{
 
 #wiki-toc ul{
 	list-style-type: none;
+	padding-left: -2%;
 }
 
 .level-1{
-	margin-left: 1em;
+	padding-left: 1em;
 }
 
 .level-2{
-	margin-left: 2em;
+	padding-left: 2em;
 }
