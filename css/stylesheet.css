@@ -97,9 +97,12 @@ p:first-letter{
 	border: 1px solid #AAA;
 }
 
+.fancy img{
+	display: block;
+	margin: auto;
+}
+
 .fancy a{
-	margin-left: auto;
-	margin-right: auto;
 	text-decoration: none;
 }
 
