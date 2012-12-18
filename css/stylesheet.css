@@ -97,11 +97,8 @@ p:first-letter{
 	border: 1px solid #AAA;
 }
 
-.fancy img{
-	margin: auto;
-}
-
 .fancy a{
+	margin: auto;
 	text-decoration: none;
 }
 
