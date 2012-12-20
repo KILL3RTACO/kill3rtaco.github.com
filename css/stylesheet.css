@@ -19,6 +19,7 @@ html{
 }
 
 .wikibox{
+	margin-top: 2%;
 	width: 42.5%;
 	float: left;
 	border: 1px solid #FFF;
