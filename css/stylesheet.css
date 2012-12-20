@@ -18,17 +18,16 @@ html{
 	border-bottom: 1px solid #AAA;
 }
 
-.box{
-	margin: 2% 10% 0 10%;
+.wikibox{
 	border: 1px solid #FFF;
 }
 
-.box p, .box ul, .box h2, .box h3, .box h4, .box, h5, .box h6{
+.wikibox p, .wikibox ul, .wikibox h2, .wikibox h3, .wikibox h4, .wikibox, h5, .wikibox h6{
 	margin-left: 2%;
 	margin-right: 2%;
 }
 
-.box h2{
+.wikibox h2{
 	border-bottom: 1px solid #AAA;
 }
 
