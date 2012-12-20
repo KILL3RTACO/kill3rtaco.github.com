@@ -19,6 +19,8 @@ html{
 }
 
 .wikibox{
+	margin: 2% 10% 0 10%;
+	width: 30%;
 	border: 1px solid #FFF;
 }
 
