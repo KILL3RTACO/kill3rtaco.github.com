@@ -374,10 +374,22 @@
 				combinations will always have three numbers. So, for example, an Enchantment with an id of 2
 				will actually be 02.
 			</p>
+			<p>
+				This number is then put at the end of the string, and in result you get a pretty long number. This number is then converted into
+				Base-32.
+			</p>
+			<p>
+				This will result in the same enchantment codes that ChestShop uses.
+			</p>
 			<h4 id='Solution_for_Enchantment_Data_Examples'>Examples</h4>
 			<p>
-				Let's say you have a sword with Unbreaking 3, Fire Aspect 2, and Smite (1).
+				Let's say you have a sword with Unbreaking 3, Efficiency 2, and Fortune 1. The id for the Unbreaking Enchantment is 34, with a level
+				of 3, so this number becomes 343. Efficiency has an id of 32. With a level of 2, the number becomes 322. The same method applied to Fotune 1
+				will result in 351.
 			</p>
+			<p>
+				Adding all these numbers together, the result number becomes 343222351. This number translated into 
+			<p>
 			<p>
 				
 			</p>
