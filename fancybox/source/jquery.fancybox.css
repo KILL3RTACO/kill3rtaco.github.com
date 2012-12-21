@@ -17,6 +17,10 @@
 	vertical-align: top;
 }
 
+.fancybox-outer {
+	border-color: #3D3D3D;
+}
+
 .fancybox-wrap {
 	position: absolute;
 	top: 0;
@@ -242,7 +246,7 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	color: #3D3D3D;
+	color: #fff;
 	padding: 10px;
 	background: #000;
 	background: rgba(0, 0, 0, .8);
