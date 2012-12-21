@@ -40,6 +40,7 @@
 
 .fancybox-opened {
 	z-index: 8030;
+	border-color: #3D3D3D;
 }
 
 .fancybox-opened .fancybox-skin {
