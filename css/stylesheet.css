@@ -134,6 +134,8 @@ p:first-letter{
 	float: left;
 	width: 50%;
 	margin-left: 10%;
+	margin-top: 2%;
+	padding: 2%;
 	border: 1px solid #FFF;
 }
 
@@ -141,5 +143,7 @@ p:first-letter{
 	float: right;
 	width: 20%;
 	margin-right: 10%;
+	margin-top: 2%;
+	padding: 2%;
 	border: 1px solid #FFF;
 }
