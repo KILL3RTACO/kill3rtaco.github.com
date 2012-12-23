@@ -151,3 +151,7 @@ p:first-letter{
 	padding: 1% 2%;
 	border: 1px solid #FFF;
 }
+
+#info-page-sidebar ul{
+	list-style-type: none;
+}
