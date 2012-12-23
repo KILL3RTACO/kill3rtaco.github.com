@@ -153,5 +153,5 @@ p:first-letter{
 }
 
 #info-page-sidebar p:first-letter{
-	padding-left: -3%;
+	padding-left: 0;
 }
