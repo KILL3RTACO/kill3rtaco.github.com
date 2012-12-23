@@ -64,6 +64,8 @@
 			<h3>Definitions</h3>
 			<p>
 				<b>ItemMail</b> - Aside from being the name of the plugin, ItemMail refers to and/or represents 'mail' sent between players.
+			</p>
+			<p>
 				<b>ItemRequest</b> - Something that was introduced in early versions but not given a name. ItemRequests refer to and/or represent
 				'requests' sent from one player to another, where one player asks another for items.
 			</p>
@@ -74,7 +76,38 @@
 			</p>
 			<h3>Commands</h3>
 			<p>
-			
+				/im mail-info [#] - See more detailed information about a specific ItemMail.
+			</p>
+			<p>
+				/im request-info [#] - See more detailed information about an ItemRequest.
+			</p>
+			<p>
+				/im mb [page] - Opens your ItemMailBox.
+			</p>
+			<p>
+				/im rb [page] - Opens your ItemRequestBox.
+			</p>
+			<p>
+				/im send &gt;player&lt; [item] [amount] - Sends ItemMail to a player.
+			</p>
+			<p>
+				/im request &gt;player&lt; &gt;item&lt; [amount] - Sends an ItemRequest to a player.
+			</p>
+			<p>
+				/im open [#] - Opens ItemMail.
+			</p>
+			<p>
+				/im delete [#/*] - Deletes ItemMail.
+			</p>
+			<p>
+				/im accept [#] - Accept an ItemRequest.
+			</p>
+			<p>
+				/im decline [#] - Decline an ItemRequest.
+			</p>
+			<p>
+				If <span class='inline-code'>-d</span> is added at the end of the send command, the plugin will try to send to the player's physical mailbox instead.
+				Try refers to the possibility that the player may not have one, or that it is full.
 			</p>
 		</div>
 		<div id='info-page-sidebar'>
