@@ -140,7 +140,7 @@ p:first-letter{
 }
 
 #info-page-content h2{
-	border-bottom: 1px solid #AAA
+	border-bottom: 1px solid #AAA;
 }
 
 #info-page-sidebar{
@@ -150,6 +150,10 @@ p:first-letter{
 	margin-top: 2%;
 	padding: 1% 2%;
 	border: 1px solid #FFF;
+}
+#info-page-sidebar h2{
+	border-bottom: 1px solid #AAA;
+	text-size: 96%;
 }
 
 #info-page-sidebar p:first-letter{
