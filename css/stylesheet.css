@@ -152,10 +152,6 @@ p:first-letter{
 	border: 1px solid #FFF;
 }
 
-#info-page-sidebar ul{
-	list-style-type: none;
-}
-
-#info-page-sidebar ul li{
-	padding-left: -2%;
+#info-page-sidebar p{
+	padding-left: -3%;
 }
