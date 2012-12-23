@@ -154,5 +154,8 @@ p:first-letter{
 
 #info-page-sidebar ul{
 	list-style-type: none;
+}
+
+#info-page-sidebar ul li{
 	padding-left: -2%;
 }
