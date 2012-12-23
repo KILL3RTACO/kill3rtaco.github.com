@@ -133,11 +133,13 @@ p:first-letter{
 #info-page-content{
 	float: left;
 	width: 50%;
-	margin-left: 10%
+	margin-left: 10%;
+	border: 1px solid #FFF;
 }
 
 #info-page-sidebar{
 	float: right;
 	width: 20%;
 	margin-right: 10%;
+	border: 1px solid #FFF;
 }
