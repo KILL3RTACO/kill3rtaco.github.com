@@ -152,6 +152,6 @@ p:first-letter{
 	border: 1px solid #FFF;
 }
 
-#info-page-sidebar p{
+#info-page-sidebar p:first-letter{
 	padding-left: -3%;
 }
