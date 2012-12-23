@@ -139,6 +139,10 @@ p:first-letter{
 	border: 1px solid #FFF;
 }
 
+#info-page-content h2{
+	border-bottom: 1px solid #AAA
+}
+
 #info-page-sidebar{
 	float: right;
 	width: 20%;
