@@ -150,6 +150,7 @@ p:first-letter{
 	margin-top: 2%;
 	padding: 1% 2%;
 	border: 1px solid #FFF;
+	position: abolute;
 }
 #info-page-sidebar h2{
 	border-bottom: 1px solid #AAA;
@@ -157,4 +158,9 @@ p:first-letter{
 
 #info-page-sidebar p:first-letter{
 	padding-left: 0;
+}
+
+#info-page-toc{
+	display: block;
+	list-style-type: none;
 }
