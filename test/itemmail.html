@@ -23,24 +23,7 @@
 				$(".fancybox").fancybox();
 			});
 		</script>
-		<script type='text/javascript'>
-		var sOffset = $("#info-page-sidebar").offset().top;
-		var shareheight = $("#info-page-sidebar").height() + 43;
-		$(window).scroll(function() {
-		    var scrollYpos = $(document).scrollTop();
-		    if (scrollYpos > sOffset - shareheight) {
-		        $("#info-page-sidebar").css({
-		            'top': '61px',
-		            'position': 'fixed'
-		        });
-		    } else {
-		        $("#info-page-sidebar").css({
-		            'top': 'auto',
-		            'position': 'relative'
-		        });
-		    }
-		});​
-		</script>
+		<script type='text/javascript' src='/js/sticky-scroll.js'></script>
 	</head>
 	<body>
 		<h1>ItemMail - Test</h1>

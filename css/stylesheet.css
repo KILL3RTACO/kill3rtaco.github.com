@@ -113,6 +113,11 @@ p:first-letter{
 	border: 1px solid #AAA;
 }
 
+.fixed{
+	position: fixed;
+	top: 2%;
+}
+
 .fancy {
 	display: block;
 	margin: auto;
@@ -151,6 +156,7 @@ p:first-letter{
 	padding: 1% 2%;
 	border: 1px solid #FFF;
 }
+
 #info-page-sidebar h2{
 	border-bottom: 1px solid #AAA;
 }
