@@ -146,6 +146,10 @@ p:first-letter{
 	right: 10%;
 }
 
+.unstick{
+	margin-right: 10%;
+}
+
 #info-page-content{
 	float: left;
 	width: 50%;
