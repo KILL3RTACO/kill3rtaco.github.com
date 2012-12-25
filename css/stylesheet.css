@@ -155,6 +155,7 @@ p:first-letter{
 	margin-top: 2%;
 	padding: 1% 2%;
 	border: 1px solid #FFF;
+	position: sticky;
 }
 
 #info-page-sidebar h2{
