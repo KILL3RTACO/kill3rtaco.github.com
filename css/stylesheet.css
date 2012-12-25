@@ -147,8 +147,9 @@ p:first-letter{
 	position: fixed;
 	float: right;
 	width: 20%;
-	right: 10%;
-	top: 3%;
+	margin-right: 10%;
+	margin-top: 2%;
+	padding: 1% 2%;
 	border: 1px solid #FFF;
 }
 #info-page-sidebar h2{
