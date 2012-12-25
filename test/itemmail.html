@@ -26,7 +26,7 @@
 			<script type="text/javascript">
 			function sticky_relocate() {
 			  var window_top = $(window).scrollTop();
-			  var div_top = $('#info-page-sidebar').offset().top;
+			  var div_top = $('#sticky-anchor').offset().top;
 			  if (window_top > div_top)
 			    $('#info-page-sidebar').addClass('stick')
 			  else
@@ -125,7 +125,7 @@
 			</p>
 			<h3 id='Permissions'>Permissions</h3>
 		</div>
-		<div style='float: left; border: 1px solid white; margin-top: 2%;'></div>
+		<div id='sticky-anchor' style='float: left; border: 1px solid white; margin-top: 2%;'></div>
 		<div id='info-page-sidebar'>
 			<h2>Project</h2>
 			<p>
