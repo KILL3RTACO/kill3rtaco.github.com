@@ -23,6 +23,20 @@
 				$(".fancybox").fancybox();
 			});
 		</script>
+			<script type="text/javascript">
+			function sticky_relocate() {
+			  var window_top = $(window).scrollTop();
+			  var div_top = $('#info-page-sidebar').offset().top;
+			  if (window_top > div_top)
+			    $('#info-page-sidebar').addClass('stick')
+			  else
+			    $('#info-page-sidebar').removeClass('stick');
+			  }
+			$(function() {
+			  $(window).scroll(sticky_relocate);
+			  sticky_relocate();
+			  });
+		</script>
 	</head>
 	<body>
 		<h1>ItemMail - Test</h1>
@@ -109,6 +123,7 @@
 				If <span class='inline-code'>-d</span> is added at the end of the send command, the plugin will try to send to the player's physical mailbox instead.
 				Try refers to the possibility that the player may not have one, or that it is full.
 			</p>
+			<h3 id='Permissions'>Permissions</h3>
 		</div>
 		<div id='info-page-sidebar'>
 			<h2>Project</h2>

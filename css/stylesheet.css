@@ -135,6 +135,11 @@ p:first-letter{
 	padding-left: 3em;
 }
 
+.stick{
+	position: fixed;
+	top: 2%;
+}
+
 #info-page-content{
 	float: left;
 	width: 50%;
