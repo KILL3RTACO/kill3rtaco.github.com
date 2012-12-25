@@ -164,9 +164,3 @@ p:first-letter{
 #info-page-sidebar p:first-letter{
 	padding-left: 0;
 }
-
-#info-page-sidebar-toc{
-	display: block;
-	list-style-type: none;
-	margin-left: -2%;
-}
