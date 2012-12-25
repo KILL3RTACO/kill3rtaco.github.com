@@ -144,13 +144,12 @@ p:first-letter{
 }
 
 #info-page-sidebar{
+	position: fixed;
 	float: right;
 	width: 20%;
-	margin-right: 10%;
-	margin-top: 2%;
-	padding: 1% 2%;
+	right: 10%;
+	top: 3%;
 	border: 1px solid #FFF;
-	position: fixed;
 }
 #info-page-sidebar h2{
 	border-bottom: 1px solid #AAA;
