@@ -168,4 +168,5 @@ p:first-letter{
 #info-page-sidebar-toc{
 	display: block;
 	list-style-type: none;
+	padding: -2%;
 }
