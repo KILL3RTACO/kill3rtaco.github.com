@@ -24,14 +24,22 @@
 			});
 		</script>
 		<script type='text/javascript'>
-			var s = $("#info-page-sidebar");
-			$(document).scroll(function(e) {
-			    if($(this).scrollTop() > $("#info-page-sidebar").height()) {
-			        header.css({"position" : "fixed", "top" : "0"});
-			    } else {
-			        header.css("position", "relative");
-			    }
-			});​
+		var sOffset = $("#info-page-sidebar").offset().top;
+		var shareheight = $("#info-page-sidebar").height() + 43;
+		$(window).scroll(function() {
+		    var scrollYpos = $(document).scrollTop();
+		    if (scrollYpos > sOffset - shareheight) {
+		        $("#info-page-sidebar").css({
+		            'top': '61px',
+		            'position': 'fixed'
+		        });
+		    } else {
+		        $("#info-page-sidebar").css({
+		            'top': 'auto',
+		            'position': 'relative'
+		        });
+		    }
+		});​
 		</script>
 	</head>
 	<body>
