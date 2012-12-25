@@ -155,7 +155,6 @@ p:first-letter{
 	margin-top: 2%;
 	padding: 1% 2%;
 	border: 1px solid #FFF;
-	position: -webkit-sticky;
 }
 
 #info-page-sidebar h2{
@@ -166,7 +165,7 @@ p:first-letter{
 	padding-left: 0;
 }
 
-#info-page-toc{
+#info-page-sidebar-toc{
 	display: block;
 	list-style-type: none;
 }
