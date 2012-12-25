@@ -138,7 +138,7 @@ p:first-letter{
 .stick{
 	position: fixed;
 	top: 2%;
-	left: 10%;
+	right: 10%;
 }
 
 #info-page-content{
