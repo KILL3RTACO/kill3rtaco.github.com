@@ -156,8 +156,6 @@ p:first-letter{
 	padding: 1% 2%;
 	border: 1px solid #FFF;
 	position: -webkit-sticky;
-	position:    -moz-sticky;
-	position:         sticky;
 }
 
 #info-page-sidebar h2{
