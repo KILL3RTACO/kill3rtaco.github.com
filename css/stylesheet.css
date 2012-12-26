@@ -59,6 +59,7 @@ code{
 	background-color: #2D2D2D;
 	display: block;
 	border: 1px dashed #FFF;
+	-webkit-border-radius: 0.5em;
 	padding: 5px;
 	margin-left: 2%;
 	margin-right: 2%;
@@ -77,6 +78,7 @@ code{
 table{
 	width: 96%;
 	margin: auto;
+	-webkit-border-radius: 0.5em;
 }
 
 table th{
