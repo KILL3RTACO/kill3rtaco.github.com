@@ -141,11 +141,6 @@ p:first-letter{
 	padding-left: 3em;
 }
 
-#sticky-anchor{
-	float: left;
-	margin-top: 2%;
-}
-
 .stick{
 	position: fixed;
 	top: 2%;
@@ -168,6 +163,8 @@ p:first-letter{
 
 #info-page-sidebar{
 	width: 30%;
+	float: left;
+	margin-right: 10%;
 }
 
 .box{
