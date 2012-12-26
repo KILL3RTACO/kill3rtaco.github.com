@@ -174,8 +174,6 @@ p:first-letter{
 	float: right;
 	width: 20%;
 	margin-top: 2%;
-	border: 1px solid #FFF;
-	-webkit-border-radius: 1em;
 }
 
 #info-page-sidebar h2{
