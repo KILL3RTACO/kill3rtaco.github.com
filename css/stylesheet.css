@@ -185,6 +185,7 @@ p:first-letter{
 	background: #797979;
 	color: #111;
 	border: 1px solid #FFF;
+	border-bottom: none;
 	-webkit-border-top-right-radius: 1em;
 	-webkit-border-top-left-radius: 1em;
 }
