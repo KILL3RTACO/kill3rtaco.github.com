@@ -195,3 +195,8 @@ p:first-letter{
 #info-page-sidebar p:first-letter{
 	padding-left: 0;
 }
+
+#info-page-sidebar p{
+	padding-left: 1%;
+	padding-right: 1%;
+}
