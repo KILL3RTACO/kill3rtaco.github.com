@@ -160,22 +160,22 @@ p:first-letter{
 	float: left;
 	width: 50%;
 	margin-left: 10%;
-	margin-top: 2%;
-	padding: 1% 2%;
-	border: 1px solid #FFF;
-	-webkit-border-radius: 1em;
 }
 
 #info-page-content h2{
 	border-bottom: 1px solid #AAA;
 }
 
-.box{
+#info-page-sidebar{
 	
 }
 
+.box{
+	margin-top: 2%;
+}
+
 .box .top{
-	padding: 1% 0 1% 10%;
+	padding: 15px 0 15px 25px%;
 	background: #FFF;
 	color: #000;
 	-webkit-border-top-right-radius: 1em;
