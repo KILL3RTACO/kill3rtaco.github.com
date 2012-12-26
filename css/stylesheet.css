@@ -167,7 +167,11 @@ p:first-letter{
 }
 
 #info-page-content h2{
-	border-bottom: 1px solid #AAA;
+	padding: 1% 0 1% 0;
+	background: #FFF;
+	color: #000;
+	-webkit-border-top-right-radius: 1em;
+	-webkit-border-top-left-radius: 1em;
 }
 
 #info-page-sidebar{
