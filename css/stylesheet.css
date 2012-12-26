@@ -174,9 +174,12 @@ p:first-letter{
 	float: right;
 	width: 20%;
 	margin-top: 2%;
+	
 }
 
-#info-page-sidebar h2{
+
+
+#info-page-sidebar .header{
 	padding: 1% 0 1% 10%;
 	background: #FFF;
 	color: #000;
