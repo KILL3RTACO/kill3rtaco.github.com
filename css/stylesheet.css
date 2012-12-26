@@ -78,6 +78,7 @@ code{
 table{
 	width: 96%;
 	margin: auto;
+	border: 1px solid #000;
 	-webkit-border-radius: 0.5em;
 }
 
