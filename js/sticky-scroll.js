@@ -1,7 +1,7 @@
 function sticky_relocate() {
 	var window_top = $(window).scrollTop();
-	var menu_bottom = $('#cssmenu').offset().bottom;
-	if (window_top > menu_bottom){
+	var div_top = $('#info-page-content').offset().top;
+	if (window_top > div_top){
 		$('#info-page-sidebar').removeClass('unstick');
 		$('#info-page-sidebar').addClass('stick');
 	}else{
