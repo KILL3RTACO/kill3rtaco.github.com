@@ -150,6 +150,10 @@ p:first-letter{
 	margin-right: 10%;
 }
 
+.round{
+	-webkit-border-radius: 1em;
+}
+
 #info-page-content{
 	float: left;
 	width: 50%;
