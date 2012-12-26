@@ -154,13 +154,13 @@ p:first-letter{
 #info-page-content{
 	float: left;
 	width: 55%;
-	margin-left: 5%;
+	margin-left: 10%;
 }
 
 #info-page-sidebar{
 	width: 25%;
 	float: left;
-	margin-left: 5%;
+	margin-left: 10%;
 }
 
 .box{
