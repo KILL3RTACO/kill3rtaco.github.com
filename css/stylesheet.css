@@ -173,6 +173,7 @@ p:first-letter{
 
 .box .content{
 	padding-left: 5%;
+	border: 1px solid #FFF;
 	-webkit-border-bottom-right-radius: 1em;
 	-webkit-border-bottom-left-radius: 1em;
 }
