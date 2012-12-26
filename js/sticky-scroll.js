@@ -1,6 +1,6 @@
 function sticky_relocate() {
 	var window_top = $(window).scrollTop();
-	var div_top = $('#sticky-anchor').offset().top;
+	var div_top = $('#info-page-content').offset().top;
 	if (window_top > div_top){
 		$('#info-page-sidebar').removeClass('unstick');
 		$('#info-page-sidebar').addClass('stick');
