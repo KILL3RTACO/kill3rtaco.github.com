@@ -170,16 +170,11 @@ p:first-letter{
 	border-bottom: 1px solid #AAA;
 }
 
-#info-page-sidebar{
-	float: right;
-	width: 20%;
-	margin-top: 2%;
+.box{
 	
 }
 
-
-
-#info-page-sidebar .header{
+.box .top{
 	padding: 1% 0 1% 10%;
 	background: #FFF;
 	color: #000;
