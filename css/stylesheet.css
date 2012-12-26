@@ -190,6 +190,7 @@ p:first-letter{
 
 .box .top h2{
 	margin-bottom: 0;
+	padding-top: 15px;
 }
 
 #info-page-sidebar p:first-letter{
