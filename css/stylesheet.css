@@ -183,8 +183,8 @@ p:first-letter{
 
 .box .top{
 	text-align: center;
-	background: #3D3D3D;
-	color: #121212;
+	background: #A7A7A7;
+	color: #777;
 	-webkit-border-top-right-radius: 1em;
 	-webkit-border-top-left-radius: 1em;
 }
