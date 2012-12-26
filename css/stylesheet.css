@@ -171,6 +171,7 @@ p:first-letter{
 	padding-left: 3%;
 	padding-right: 3%;
 	border: 1px solid #FFF;
+	border-top: none;
 	-webkit-border-bottom-right-radius: 1em;
 	-webkit-border-bottom-left-radius: 1em;
 }
