@@ -144,11 +144,11 @@ p:first-letter{
 .stick{
 	position: fixed;
 	top: 2%;
-	right: 10%;
+	right: 5%;
 }
 
 .unstick{
-	margin-right: 10%;
+	margin-right: 5%;
 }
 
 #info-page-content{
