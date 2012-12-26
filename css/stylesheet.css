@@ -171,8 +171,8 @@ p:first-letter{
 	padding-left: 3%;
 	padding-right: 3%;
 	border: 1px solid #AAA;
-	-webkit-border-bottom-right-radius: 1em;
-	-webkit-border-bottom-left-radius: 1em;
+	-webkit-border-bottom-right-radius: 0.5em;
+	-webkit-border-bottom-left-radius: 0.5em;
 }
 
 .box .content p{
@@ -186,8 +186,8 @@ p:first-letter{
 	color: #111;
 	border: 1px solid #AAA;
 	border-bottom: none;
-	-webkit-border-top-right-radius: 1em;
-	-webkit-border-top-left-radius: 1em;
+	-webkit-border-bottom-right-radius: 0.5em;
+	-webkit-border-bottom-left-radius: 0.5em;
 }
 
 .box .top h2{
