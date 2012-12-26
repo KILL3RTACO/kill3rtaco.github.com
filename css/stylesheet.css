@@ -179,7 +179,7 @@ p:first-letter{
 }
 
 .box .top{
-	padding-left: 5%;
+	text-align: center;
 	background: #FFF;
 	color: #000;
 	-webkit-border-top-right-radius: 1em;
