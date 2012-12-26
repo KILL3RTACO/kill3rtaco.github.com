@@ -172,7 +172,6 @@ p:first-letter{
 }
 
 .box .content{
-	margin-top: 0;
 	padding-left: 5%;
 	border: 1px solid #FFF;
 	-webkit-border-bottom-right-radius: 1em;
@@ -185,6 +184,10 @@ p:first-letter{
 	color: #000;
 	-webkit-border-top-right-radius: 1em;
 	-webkit-border-top-left-radius: 1em;
+}
+
+.box .top h2{
+	margin-bottom: 0;
 }
 
 #info-page-sidebar p:first-letter{
