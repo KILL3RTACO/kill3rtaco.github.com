@@ -171,8 +171,14 @@ p:first-letter{
 	margin-top: 2%;
 }
 
+.box .content{
+	padding-left: 5%;
+	-webkit-border-bottom-right-radius: 1em;
+	-webkit-border-bottom-left-radius: 1em;
+}
+
 .box .top{
-	padding: 10px 2%;
+	padding-left: 5%;
 	background: #FFF;
 	color: #000;
 	-webkit-border-top-right-radius: 1em;
