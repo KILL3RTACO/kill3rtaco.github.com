@@ -4,6 +4,9 @@ html{
 	font-family: Ubuntu, sans-serif;
 }
 
+#main{
+	margin: 2% 10% 0 10%;
+}
 
 .wikibox{
 	margin-top: 2%;
