@@ -48,371 +48,376 @@
 				<li><a href='http://dev.bukkit.org/profiles/KILL3RTACO'>BukkitDev</a></li>
 			</ul>
 		</div>
-		<div id='main'>
-			<h2 id='About'>About</h2>
-			<p>
-				The idea for ItemMail came to me whilst playing on my regular server, <a href='http://www.imdeity.com'>imdeity.com</a>.
-				This server has many towns and shop, and at the time player trading was common. The problem was that usually these players
-				would to a town spawn, but could not decide which, or go to the server spawn and risk other players stealing they're items.
-				My idea was that through a simple command, player's would be able to 'send' items to another player, without the need to move.
-			</p>
-			<div id='wiki-toc'>
-				<a class='level-1' href='#About'>1 About</a><br/>
-				<a class='level-1' href='#History'>2 History</a><br/>
-				<a class='level-1' href='#Command_Reference'>3 Command Reference</a><br/>
-				<a class='level-1' href='#Permissions'>4 Permissions</a><br/>
-				<a class='level-1' href='#Sending_Mail'>5 Sending Mail</a><br/>
-				<a class='level-2' href='#Sending_Mail_Parameters'>5.1 Parameters</a><br/>
-				<a class='level-1' href='#Sending_Requests'>6 Sending Requests</a><br/>
-				<a class='level-1' href='#Player_Mailboxes'>7 Player Mailboxes</a><br/>
-				<a class='level-2' href='#Sending_Mail_Parameters'>7.1 Parameters</a><br/>
-				<a class='level-1' href='#Accessing_Mail'>8 Accessing Mail</a><br/>
-				<a class='level-2' href='#Opening_Mail'>8.1 Opening Mail</a><br/>
-				<a class='level-2' href='#Deleting_Mail'>8.2 Deleting Mail</a><br/>
-				<a class='level-1' href='#Accessing_Requests'>9 Accessing Requests</a><br/>
-				<a class='level-2' href='#Accepting_Requests'>9.1 Accepting Requests</a><br/>
-				<a class='level-2' href='#Declining_Requests'>9.2 Declining Requests</a><br/>
-				<a class='level-1' href='#Suggestions'>10 Suggestions</a><br/>
-				<a class='level-1' href='#See_Also'>11 See Also</a><br/>
+		<div id='main' class='box'>
+			<div class='top'>
+				<h2>ItemMail</h2>
 			</div>
-			<h2 id='History'>History</h2>
-			<p>
-				In the first version of the plugin, I used a Java Object called a HashMap to store everyone's mail. I was a noob at programming
-				during this time, and I later realized that if the server was shut down or restarted/reloaded, everyone's mail would be gone. I
-				fixed this somewhat in the next version
-			</p>
-			<p>
-				In this version, I used MySQL databases to store the mail. It was something I really wanted to implement after learning the
-				disadvantages of HashMaps. MySql databases have two main advantages:
-			</p>
-			<ul>
-				<li>They are easy to manipulate</li>
-				<li>They are stored on a server, so even if the server went off the Mail is safe</li>
-			</ul>
-			<p>
-				However shortly after this advancement, Echantments were possible. The MySQL tables do not store Enchantment data. I am working
-				a way to hold that data. At the moment, however, any item sent with Echantments will lose their Echantment.
-			</p>
-			<h2 id='Command_Reference'>Command Reference</h2>
-			<table>
-				<tr>
-					<th>Command</th>
-					<th>Parameters</th>
-					<th>Description</th>
-				</tr>
-				<tr>
-					<td>/im</td>
-					<td>[page]</td>
-					<td>Views mail at page <span class='inline-code'>[page]</span></td>
-				</tr>
-				<tr>
-					<td>/im reqs</td>
-					<td>[page]</td>
-					<td>Views requests at page <span class='inline-code'>[page]</span></td>
-				</tr>
-				<tr>
-					<th class='spanblue' colspan='3'>Mail</th>
-				</tr>
-				<tr>
-					<td>/im send</td>
-					<td>[receiver] [item:damage] [#]</td>
-					<td>Sends specified items to <span class='inline-code'>[receiver]</span>. Default amount: 1</td>
-				</tr>
-				<tr>
-					<td>/im open</td>
-					<td>[#]</td>
-					<td>Opens the specified mail</td>
-				</tr>
-				<tr>
-					<td>/im delete</td>
-					<td>[#/*]</td>
-					<td>Deletes specified mail</td>
-				</tr>
-				<tr>
-					<th class='spanblue' colspan='3'>Requests</th>
-				</tr>
-				<tr>
-					<td>/im req</td>
-					<td>[receiver] [item:damage] [#]</td>
-					<td>Sends a request to <span class='inline-code'>[receiver]</span> requesting for the specified items. Default amount: 1</td>
-				</tr>
-				<tr>
-					<td>/im decline</td>
-					<td>[#]</td>
-					<td>Declines the specified request</td>
-				</tr>
-				<tr>
-					<td>/im accept</td>
-					<td>[#]</td>
-					<td>Accepts the specified request</td>
-				</tr>
-			</table>
-			<h2 id='Permissions'>Permissions</h2>
-			<table>
-				<tr>
-					<th>Permission</th>
-					<th>Description</th>
-				</tr>
-				<tr>
-					<td>ItemMail.action.send</td>
-					<td>Allows a player to send mail to another player</td>
-				</tr>
-				<tr>
-					<td>ItemMail.action.open</td>
-					<td>Allows a player to open mail</td>
-				</tr>
-				<tr>
-					<td>ItemMail.action.delete</td>
-					<td>Allows a player to delete mail</td>
-				</tr>
-				<tr>
-					<td>ItemMail.action.request</td>
-					<td>Allows a player to send a request to another player</td>
-				</tr>
-				<tr>
-					<td>ItemMail.action.accept</td>
-					<td>Allows a player to accept a request</td>
-				</tr>
-				<tr>
-					<td>ItemMail.action.decline</td>
-					<td>Allows a player to decline a request</td>
-			</table>
-			<h2 id='Sending_Mail'>Sending Mail</h2>
-			<p>
-				The main feature of the plugin is sending mail. The syntax for the command is as follows:
-			</p>
-			<code>
-				/im send [player] [item:damage] [amount]
-			</code>
-			<h3 id='Sending_Mail_Parameters'>Parameters</h3>
-			<p>
-				This command has three different parameters.
-			</p>
-			<table>
-				<tr>
-					<th>Parameter</th>
-					<th>Required</th>
-					<th>Description</th>
-				</tr>
-				<tr>
-					<td>[player]</td>
-					<td>yes</td>
-					<td>Defines who you're sending the items to.</td>
-				</tr>
-				<tr>
-					<td>[item:damage]</td>
-					<td>yes</td>
-					<td>
-						Defines what you are sending. It can be the name of item, such as "bed", or the id of an item. You can specify
-						damage/data values as well, so you can send a specific type of wool/dye/log etc.
-					</td>
-				</tr>
-				<tr>
-					<td>[amount]</td>
-					<td>no</td>
-					<td>
-						Defines the amount of the item you are sending (default: 1). An error will be sent if you do not have enough (for
-						instance if you want to send 12 diamonds but you only have 4).
-					</td>
-				</tr>
-			</table>
-			<h2 id='Sending_Requests'>Sending Requests</h2>
-			<p>
-				Requests are another feature in ItemMail where you can ask other players for mail. If the request is accepted, the requested items
-				will be sent to you as if they entered the command:
-			</p>
-			<code>
-				/im send [yourname] [requested-items]
-			</code>
-			<p>
-				However, if it is declined, the items will not be sent.
-			</p>
-			<p>
-				The syntax for the command to send a request is as follows:
-			</p>
-			<code>
-				/im req [name] [item:damage] [amount]
-			</code>
-			<h3 id='Sending_Requests_Parameters'>Parameters</h3>
-			<p>
-				This command has three different parameters.
-			</p>
-			<table>
-				<tr>
-					<th>Parameter</th>
-					<th>Required</th>
-					<th>Description</th>
-				</tr>
-				<tr>
-					<td>[player]</td>
-					<td>yes</td>
-					<td>Defines who you are requesting the items from.</td>
-				</tr>
-				<tr>
-					<td>[item:damage]</td>
-					<td>yes</td>
-					<td>
-						Defines what you are requesting. It can be the name of item, such as "bed", or the id of an item. You can specify
-						damage/data values as well.
-					</td>
-				</tr>
-				<tr>
-					<td>[amount]</td>
-					<td>no</td>
-					<td>
-						Defines the amount of the item you are requesting (default: 1).
-					</td>
-				</tr>
-			</table>
-			<h2 id='Player_Mailboxes'>Player Mailboxes</h2>
-			<p>
-				Each player has two different Mailboxes: one that stores mail and another that stores requests. Each of these Mailboxes has
-				its own command to access. These mailboxes use a page system, so you always see a set number of mail on each page (unless
-				perhaps you are viewing the last page).
-			</p>
-			<h2 id='Accessing_Mail'>Accessing Mail</h2>
-			<p>
-				To see mail that was sent to you, type the command
-			</p>
-			<code>
-				/im [page]
-			</code>
-			<p>
-				The <span class='inline-code'>[page]</span> parameter defines which page you are viewing.
-			</p>
-			<h3 id='Opening_Mail'>Opening Mail</h3>
-			<p>
-				Mail sent to you doesn't have a use until you open it (duh). To open mail, type the command
-			</p>
-			<code>
-				/im open [#]
-			</code>
-			<p>
-				The <span class='inline-code'>[#]</span> parameter defines which mail to open. When viewing your mail, a number (starting
-				at 1) appears on the left of each item. For example, the first item will have an id of <span class='inline-code'>[1]</span>,
-				the second item will have an id of <span class='inline-code'>[2]</span>, and so on. Here is an example of what the mailbox looks
-				like when viewed:
-			</p>
-			<div class='fancy' style='width:200px'>
-				<a id='im-mb' class='fancybox' href='/images/fullsize/im-mb_full.png' title="Example of a player's Mailbox. The values you see were manually entered through SQLBuddy">
-					<img src='/images/thumbnail/im-mb_small.png'/>
-				</a>
+			<div>
+				<h3 id='About'>About</h3>
+				<p>
+					The idea for ItemMail came to me whilst playing on my regular server, <a href='http://www.imdeity.com'>imdeity.com</a>.
+					This server has many towns and shop, and at the time player trading was common. The problem was that usually these players
+					would to a town spawn, but could not decide which, or go to the server spawn and risk other players stealing they're items.
+					My idea was that through a simple command, player's would be able to 'send' items to another player, without the need to move.
+				</p>
+				<div id='wiki-toc'>
+					<a class='level-1' href='#About'>1 About</a><br/>
+					<a class='level-1' href='#History'>2 History</a><br/>
+					<a class='level-1' href='#Command_Reference'>3 Command Reference</a><br/>
+					<a class='level-1' href='#Permissions'>4 Permissions</a><br/>
+					<a class='level-1' href='#Sending_Mail'>5 Sending Mail</a><br/>
+					<a class='level-2' href='#Sending_Mail_Parameters'>5.1 Parameters</a><br/>
+					<a class='level-1' href='#Sending_Requests'>6 Sending Requests</a><br/>
+					<a class='level-1' href='#Player_Mailboxes'>7 Player Mailboxes</a><br/>
+					<a class='level-2' href='#Sending_Mail_Parameters'>7.1 Parameters</a><br/>
+					<a class='level-1' href='#Accessing_Mail'>8 Accessing Mail</a><br/>
+					<a class='level-2' href='#Opening_Mail'>8.1 Opening Mail</a><br/>
+					<a class='level-2' href='#Deleting_Mail'>8.2 Deleting Mail</a><br/>
+					<a class='level-1' href='#Accessing_Requests'>9 Accessing Requests</a><br/>
+					<a class='level-2' href='#Accepting_Requests'>9.1 Accepting Requests</a><br/>
+					<a class='level-2' href='#Declining_Requests'>9.2 Declining Requests</a><br/>
+					<a class='level-1' href='#Suggestions'>10 Suggestions</a><br/>
+					<a class='level-1' href='#See_Also'>11 See Also</a><br/>
+				</div>
+				<h3 id='History'>History</h3>
+				<p>
+					In the first version of the plugin, I used a Java Object called a HashMap to store everyone's mail. I was a noob at programming
+					during this time, and I later realized that if the server was shut down or restarted/reloaded, everyone's mail would be gone. I
+					fixed this somewhat in the next version
+				</p>
+				<p>
+					In this version, I used MySQL databases to store the mail. It was something I really wanted to implement after learning the
+					disadvantages of HashMaps. MySql databases have two main advantages:
+				</p>
+				<ul>
+					<li>They are easy to manipulate</li>
+					<li>They are stored on a server, so even if the server went off the Mail is safe</li>
+				</ul>
+				<p>
+					However shortly after this advancement, Echantments were possible. The MySQL tables do not store Enchantment data. I am working
+					a way to hold that data. At the moment, however, any item sent with Echantments will lose their Echantment.
+				</p>
+				<h3 id='Command_Reference'>Command Reference</h3>
+				<table>
+					<tr>
+						<th>Command</th>
+						<th>Parameters</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>/im</td>
+						<td>[page]</td>
+						<td>Views mail at page <span class='inline-code'>[page]</span></td>
+					</tr>
+					<tr>
+						<td>/im reqs</td>
+						<td>[page]</td>
+						<td>Views requests at page <span class='inline-code'>[page]</span></td>
+					</tr>
+					<tr>
+						<th class='spanblue' colspan='3'>Mail</th>
+					</tr>
+					<tr>
+						<td>/im send</td>
+						<td>[receiver] [item:damage] [#]</td>
+						<td>Sends specified items to <span class='inline-code'>[receiver]</span>. Default amount: 1</td>
+					</tr>
+					<tr>
+						<td>/im open</td>
+						<td>[#]</td>
+						<td>Opens the specified mail</td>
+					</tr>
+					<tr>
+						<td>/im delete</td>
+						<td>[#/*]</td>
+						<td>Deletes specified mail</td>
+					</tr>
+					<tr>
+						<th class='spanblue' colspan='3'>Requests</th>
+					</tr>
+					<tr>
+						<td>/im req</td>
+						<td>[receiver] [item:damage] [#]</td>
+						<td>Sends a request to <span class='inline-code'>[receiver]</span> requesting for the specified items. Default amount: 1</td>
+					</tr>
+					<tr>
+						<td>/im decline</td>
+						<td>[#]</td>
+						<td>Declines the specified request</td>
+					</tr>
+					<tr>
+						<td>/im accept</td>
+						<td>[#]</td>
+						<td>Accepts the specified request</td>
+					</tr>
+				</table>
+				<h3 id='Permissions'>Permissions</h3>
+				<table>
+					<tr>
+						<th>Permission</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>ItemMail.action.send</td>
+						<td>Allows a player to send mail to another player</td>
+					</tr>
+					<tr>
+						<td>ItemMail.action.open</td>
+						<td>Allows a player to open mail</td>
+					</tr>
+					<tr>
+						<td>ItemMail.action.delete</td>
+						<td>Allows a player to delete mail</td>
+					</tr>
+					<tr>
+						<td>ItemMail.action.request</td>
+						<td>Allows a player to send a request to another player</td>
+					</tr>
+					<tr>
+						<td>ItemMail.action.accept</td>
+						<td>Allows a player to accept a request</td>
+					</tr>
+					<tr>
+						<td>ItemMail.action.decline</td>
+						<td>Allows a player to decline a request</td>
+				</table>
+				<h3 id='Sending_Mail'>Sending Mail</h3>
+				<p>
+					The main feature of the plugin is sending mail. The syntax for the command is as follows:
+				</p>
+				<code>
+					/im send [player] [item:damage] [amount]
+				</code>
+				<h3 id='Sending_Mail_Parameters'>Parameters</h3>
+				<p>
+					This command has three different parameters.
+				</p>
+				<table>
+					<tr>
+						<th>Parameter</th>
+						<th>Required</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>[player]</td>
+						<td>yes</td>
+						<td>Defines who you're sending the items to.</td>
+					</tr>
+					<tr>
+						<td>[item:damage]</td>
+						<td>yes</td>
+						<td>
+							Defines what you are sending. It can be the name of item, such as "bed", or the id of an item. You can specify
+							damage/data values as well, so you can send a specific type of wool/dye/log etc.
+						</td>
+					</tr>
+					<tr>
+						<td>[amount]</td>
+						<td>no</td>
+						<td>
+							Defines the amount of the item you are sending (default: 1). An error will be sent if you do not have enough (for
+							instance if you want to send 12 diamonds but you only have 4).
+						</td>
+					</tr>
+				</table>
+				<h3 id='Sending_Requests'>Sending Requests</h3>
+				<p>
+					Requests are another feature in ItemMail where you can ask other players for mail. If the request is accepted, the requested items
+					will be sent to you as if they entered the command:
+				</p>
+				<code>
+					/im send [yourname] [requested-items]
+				</code>
+				<p>
+					However, if it is declined, the items will not be sent.
+				</p>
+				<p>
+					The syntax for the command to send a request is as follows:
+				</p>
+				<code>
+					/im req [name] [item:damage] [amount]
+				</code>
+				<h3 id='Sending_Requests_Parameters'>Parameters</h3>
+				<p>
+					This command has three different parameters.
+				</p>
+				<table>
+					<tr>
+						<th>Parameter</th>
+						<th>Required</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>[player]</td>
+						<td>yes</td>
+						<td>Defines who you are requesting the items from.</td>
+					</tr>
+					<tr>
+						<td>[item:damage]</td>
+						<td>yes</td>
+						<td>
+							Defines what you are requesting. It can be the name of item, such as "bed", or the id of an item. You can specify
+							damage/data values as well.
+						</td>
+					</tr>
+					<tr>
+						<td>[amount]</td>
+						<td>no</td>
+						<td>
+							Defines the amount of the item you are requesting (default: 1).
+						</td>
+					</tr>
+				</table>
+				<h3 id='Player_Mailboxes'>Player Mailboxes</h3>
+				<p>
+					Each player has two different Mailboxes: one that stores mail and another that stores requests. Each of these Mailboxes has
+					its own command to access. These mailboxes use a page system, so you always see a set number of mail on each page (unless
+					perhaps you are viewing the last page).
+				</p>
+				<h3 id='Accessing_Mail'>Accessing Mail</h3>
+				<p>
+					To see mail that was sent to you, type the command
+				</p>
+				<code>
+					/im [page]
+				</code>
+				<p>
+					The <span class='inline-code'>[page]</span> parameter defines which page you are viewing.
+				</p>
+				<h3 id='Opening_Mail'>Opening Mail</h3>
+				<p>
+					Mail sent to you doesn't have a use until you open it (duh). To open mail, type the command
+				</p>
+				<code>
+					/im open [#]
+				</code>
+				<p>
+					The <span class='inline-code'>[#]</span> parameter defines which mail to open. When viewing your mail, a number (starting
+					at 1) appears on the left of each item. For example, the first item will have an id of <span class='inline-code'>[1]</span>,
+					the second item will have an id of <span class='inline-code'>[2]</span>, and so on. Here is an example of what the mailbox looks
+					like when viewed:
+				</p>
+				<div class='fancy' style='width:200px'>
+					<a id='im-mb' class='fancybox' href='/images/fullsize/im-mb_full.png' title="Example of a player's Mailbox. The values you see were manually entered through SQLBuddy">
+						<img src='/images/thumbnail/im-mb_small.png'/>
+					</a>
+				</div>
+				<p>
+					If in this case you wanted the diamonds, you would type
+				</p>
+				<code>
+					/im open 2
+				</code>
+				<p>
+					If you do not specify a number, the plugin will try to open the last mail sent to you. In this case, that would be the 
+					<span class='inline-code'>1032 TNT</span>. However if you give a number and that mail doesn't exist (or don't specify
+					a number and you have no mail in your mailbox), you will get an error message saying "That mail doesn't exist!";
+				</p>
+				<h3 id='Deleting_Mail'>Deleting Mail</h3>
+				<p>
+					But what if you don't want the mail? You can easily delete it with
+				</p>
+				<code>
+					/im delete [#/*]
+				</code>
+				<p>
+					If the last parameter is a number (and that mail exists) it will delete that mail. It does not actually 'delete' it from
+					the MySQL database (so admins can still see), but it marks it as read without giving you the items.
+				</p>
+				<p>
+					You can also delete all of your mail by using an asterisk (*) instead of a number.
+				</p>
+				<h3 id='Accessing_Requests'>Accessing Requests</h3>
+				<p>
+					Viewing your requests is much like viewing your mail. However the is an extra parameter:
+				</p>
+				<code>
+					/im reqs [page]
+				</code>
+				<p>
+					The parameter <span class='inline-code'>reqs</span> is required to view requests. Otherwise, you would be viewing your mail.
+				</p>
+				<h3 id='Accepting_Requests'>Accepting Requests</h3>
+				<p>
+					To accept a request, use the command
+				</p>
+				<code>
+					/im accept [#]
+				</code>
+				<p>
+					If you don't give a number, the plugin will try accept the last request sent to you. Accepting a request is the same thing as:
+				</p>
+				<code>
+					/im send [sender-of-request] [requested-items]
+				</code>
+				<h3 id='Declining_Requests'>Declining Requests</h3>
+				<p>
+					If you do not wish to accept a request, you can always decline it. To do this type the command
+				</p>
+				<code>
+					/im decline [#]
+				</code>
+				<p>
+					If you don't give a number, the plugin will decline the last request sent to you (if any).
+				</p>
+				<h3 id='Planned_Features'>Planned Features</h3>
+				<p>
+					Below are features I have planned for ItemMail.
+				</p>
+				<p>
+					<b>Note:</b><i>None of this information is set in stone, just because it is on this page
+					does not mean it will be added in the future</i>.
+				</p>
+				<h3 id='Solution_for_Enchantment_Data'>Solution for Enchantment Data</h3>
+				<p>
+					This solution is fairly simple, or at least for me to understand.
+				</p>
+				<p>
+					Each Enchantment has an ID, just like blocks and items. They also have a level. The idea is to
+					take the id, put it into a variable, and put the level at the end of it. However each of these
+					combinations will always have three numbers. So, for example, an Enchantment with an id of 2
+					will actually be 02.
+				</p>
+				<p>
+					This number is then put at the end of the string, and in result you get a pretty long number. This number is then converted into
+					Base-32.
+				</p>
+				<p>
+					This will result in the same enchantment codes that ChestShop uses.
+				</p>
+				<h4 id='Solution_for_Enchantment_Data_Examples'>Examples</h4>
+				<p>
+					Let's say you have a sword with Unbreaking 3, Efficiency 2, and Fortune 1. The id for the Unbreaking Enchantment is 34, with a level
+					of 3, so this number becomes 343. Efficiency has an id of 32. With a level of 2, the number becomes 322. The same method applied to Fotune 1
+					will result in 351.
+				</p>
+				<p>
+					Adding all these numbers together, the result number becomes 343222351. This number translated into 
+				<p>
+				<p>
+					
+				</p>
+				<h3 id='Suggestions'>Suggestions</h3>
+				<table>
+					<tr>
+						<th>Suggested by</th>
+						<th>Status</th>
+						<th>Suggestion</th>
+					</tr>
+					<tr>
+						<td>michaeldriskell</td>
+						<td class='planned'>Planned</td>
+						<td>Add functionality for a physical mailbox where you can give players items.</td>
+					</tr>
+				</table>
+				<h3 id="See_Also">See Also</h3>
+				<ul style='list-style-type: none; margin-left: -2%'>
+					<li><a href='http://dev.bukkit.org/server-mods/mail'>Mail</a> - A plugin to send private messages in-game</li>
+				</ul>
+				<p>
+					<a href='#'>Back to top</a>
+				</p>
 			</div>
-			<p>
-				If in this case you wanted the diamonds, you would type
-			</p>
-			<code>
-				/im open 2
-			</code>
-			<p>
-				If you do not specify a number, the plugin will try to open the last mail sent to you. In this case, that would be the 
-				<span class='inline-code'>1032 TNT</span>. However if you give a number and that mail doesn't exist (or don't specify
-				a number and you have no mail in your mailbox), you will get an error message saying "That mail doesn't exist!";
-			</p>
-			<h3 id='Deleting_Mail'>Deleting Mail</h3>
-			<p>
-				But what if you don't want the mail? You can easily delete it with
-			</p>
-			<code>
-				/im delete [#/*]
-			</code>
-			<p>
-				If the last parameter is a number (and that mail exists) it will delete that mail. It does not actually 'delete' it from
-				the MySQL database (so admins can still see), but it marks it as read without giving you the items.
-			</p>
-			<p>
-				You can also delete all of your mail by using an asterisk (*) instead of a number.
-			</p>
-			<h2 id='Accessing_Requests'>Accessing Requests</h2>
-			<p>
-				Viewing your requests is much like viewing your mail. However the is an extra parameter:
-			</p>
-			<code>
-				/im reqs [page]
-			</code>
-			<p>
-				The parameter <span class='inline-code'>reqs</span> is required to view requests. Otherwise, you would be viewing your mail.
-			</p>
-			<h3 id='Accepting_Requests'>Accepting Requests</h3>
-			<p>
-				To accept a request, use the command
-			</p>
-			<code>
-				/im accept [#]
-			</code>
-			<p>
-				If you don't give a number, the plugin will try accept the last request sent to you. Accepting a request is the same thing as:
-			</p>
-			<code>
-				/im send [sender-of-request] [requested-items]
-			</code>
-			<h3 id='Declining_Requests'>Declining Requests</h3>
-			<p>
-				If you do not wish to accept a request, you can always decline it. To do this type the command
-			</p>
-			<code>
-				/im decline [#]
-			</code>
-			<p>
-				If you don't give a number, the plugin will decline the last request sent to you (if any).
-			</p>
-			<h2 id='Planned_Features'>Planned Features</h2>
-			<p>
-				Below are features I have planned for ItemMail.
-			</p>
-			<p>
-				<b>Note:</b><i>None of this information is set in stone, just because it is on this page
-				does not mean it will be added in the future</i>.
-			</p>
-			<h3 id='Solution_for_Enchantment_Data'>Solution for Enchantment Data</h3>
-			<p>
-				This solution is fairly simple, or at least for me to understand.
-			</p>
-			<p>
-				Each Enchantment has an ID, just like blocks and items. They also have a level. The idea is to
-				take the id, put it into a variable, and put the level at the end of it. However each of these
-				combinations will always have three numbers. So, for example, an Enchantment with an id of 2
-				will actually be 02.
-			</p>
-			<p>
-				This number is then put at the end of the string, and in result you get a pretty long number. This number is then converted into
-				Base-32.
-			</p>
-			<p>
-				This will result in the same enchantment codes that ChestShop uses.
-			</p>
-			<h4 id='Solution_for_Enchantment_Data_Examples'>Examples</h4>
-			<p>
-				Let's say you have a sword with Unbreaking 3, Efficiency 2, and Fortune 1. The id for the Unbreaking Enchantment is 34, with a level
-				of 3, so this number becomes 343. Efficiency has an id of 32. With a level of 2, the number becomes 322. The same method applied to Fotune 1
-				will result in 351.
-			</p>
-			<p>
-				Adding all these numbers together, the result number becomes 343222351. This number translated into 
-			<p>
-			<p>
-				
-			</p>
-			<h3 id='Suggestions'>Suggestions</h3>
-			<table>
-				<tr>
-					<th>Suggested by</th>
-					<th>Status</th>
-					<th>Suggestion</th>
-				</tr>
-				<tr>
-					<td>michaeldriskell</td>
-					<td class='planned'>Planned</td>
-					<td>Add functionality for a physical mailbox where you can give players items.</td>
-				</tr>
-			</table>
-			<h2 id="See_Also">See Also</h2>
-			<ul style='list-style-type: none; margin-left: -2%'>
-				<li><a href='http://dev.bukkit.org/server-mods/mail'>Mail</a> - A plugin to send private messages in-game</li>
-			</ul>
-			<p>
-				<a href='#'>Back to top</a>
-			</p>
 		</div>
 	</body>
 </html>

@@ -10,6 +10,7 @@ html{
 
 .wikibox{
 	margin-top: 2%;
+	padding: 5%;
 	width: 42.5%;
 	float: left;
 	border: 1px solid #FFF;
@@ -21,7 +22,7 @@ html{
 	margin-right: 2%;
 }
 
-.wikibox h2{
+.wikibox h3{
 	border-bottom: 1px solid #AAA;
 }
 

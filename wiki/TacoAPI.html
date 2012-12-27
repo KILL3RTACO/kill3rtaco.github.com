@@ -49,55 +49,60 @@
 				<li><a href='http://dev.bukkit.org/profiles/KILL3RTACO'>BukkitDev</a></li>
 			</ul>
 		</div>
-		<div id='main'>
-			<h2 id='About'>About</h2>
-			<p>
+		<div id='main' class='box'>
+			<div class='top'>
+				<h2>TacoAPI</h2>
+			</div>
+			<div class='content'>
+				<h3 id='About'>About</h3>
+				<p>
 				When I saw that I was reusing code too many times in my plugins, I decided to make this. Most of which is inspired
 				by <a href='http://dev.bukkit.org/server-mods/deityapi'>DeityAPI</a> by ImDeity/vanZeben. I wouldnt say that I
 				<i>copied</i> their code, but maybe copied quite a bit of what I liked and tweaked it to make it easier for me.
-			</p>
-			<div id='wiki-toc'>
-				<a class='level-1' href='#About'>1. About</a><br/>
-				<a class='level-1' href='#DeityCommandReceiver_and_TacoCommand'>4. DeityCommandReceiver and TacoCommand</a>
+				</p>
+				<div id='wiki-toc'>
+					<a class='level-1' href='#About'>1. About</a><br/>
+					<a class='level-1' href='#DeityCommandReceiver_and_TacoCommand'>4. DeityCommandReceiver and TacoCommand</a>
+				</div>
+				<h3 id='Differences_Between_DeityAPI_and_TacoAPI'>Differences Between DeityAPI and TacoAPI</h3>
+				<p>
+					The two plugins are similar in many ways. DeityAPI I admit is far superior. But a lot of the custom plugins they use for the
+					server use WorldGaurd, WorlEdit and various other plugins. Mine don't (with the exception of Mineopoly, to paste the board),
+					so I just used some of the basic utilities in DeityAPI.
+				</p>
+				<p>
+					These 'utilities' mostly includes the command handling.
+				</p>
+				<h3 id='DeityCommandHandler_and_TacoCommandHandler'>DeityCommandHandler and TacoCommandHandler</h3>
+				<p>
+					The similarities between these are almost identical. I added an alias system the command handling, something the DeityCommandHandler
+					doesn't have (since I last checked). This means that a 'subcommand' (the second "word" when typing a command) can have different names.
+				</p>
+				<p>
+					For example, in ItemMail:
+				</p>
+				<code>
+					/im <i>send</i> kill3rtaco diamond 64
+				</code>
+				<p>
+					Is the same as
+				</p>
+				<code>
+					/im <i>gift</i> kill3rtaco diamond 64
+				</code>
+				<h3 id='DeityCommandReceiver_and_TacoCommand'>DeityCommandReceiver and TacoCommand</h3>
+				<p>
+					These two classes are used to run the command. I removed the 'Receiver' part of the name (didn't need it), so obviously thats a difference.
+					TacoCommands, as mentioned earlier, can have aliases
+				</p>
+				<h3 id="See_Also">See Also</h3>
+				<ul style='list-style-type: none; margin-left: -2%'>
+					<li></li>
+				</ul>
+				<p>
+					<a href='#'>Back to top</a>
+				</p>
 			</div>
-			<h2 id='Differences_Between_DeityAPI_and_TacoAPI'>Differences Between DeityAPI and TacoAPI</h2>
-			<p>
-				The two plugins are similar in many ways. DeityAPI I admit is far superior. But a lot of the custom plugins they use for the
-				server use WorldGaurd, WorlEdit and various other plugins. Mine don't (with the exception of Mineopoly, to paste the board),
-				so I just used some of the basic utilities in DeityAPI.
-			</p>
-			<p>
-				These 'utilities' mostly includes the command handling.
-			</p>
-			<h2 id='DeityCommandHandler_and_TacoCommandHandler'>DeityCommandHandler and TacoCommandHandler</h2>
-			<p>
-				The similarities between these are almost identical. I added an alias system the command handling, something the DeityCommandHandler
-				doesn't have (since I last checked). This means that a 'subcommand' (the second "word" when typing a command) can have different names.
-			</p>
-			<p>
-				For example, in ItemMail:
-			</p>
-			<code>
-				/im <i>send</i> kill3rtaco diamond 64
-			</code>
-			<p>
-				Is the same as
-			</p>
-			<code>
-				/im <i>gift</i> kill3rtaco diamond 64
-			</code>
-			<h2 id='DeityCommandReceiver_and_TacoCommand'>DeityCommandReceiver and TacoCommand</h2>
-			<p>
-				These two classes are used to run the command. I removed the 'Receiver' part of the name (didn't need it), so obviously thats a difference.
-				TacoCommands, as mentioned earlier, can have aliases
-			</p>
-			<h2 id="See_Also">See Also</h2>
-			<ul style='list-style-type: none; margin-left: -2%'>
-				<li></li>
-			</ul>
-			<p>
-				<a href='#'>Back to top</a>
-			</p>
 		</div>
 	</body>
 </html>
