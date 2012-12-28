@@ -99,8 +99,9 @@ table td{
 
 .wikibox{
 	margin-top: 2%;
-	padding: 5%;
-	width: 32%;
+	padding-left: 2%;
+	padding-right: 2%;
+	width: 38%;
 	float: left;
 	border: 1px solid #B91F1F;
 	-webkit-border-radius: 1em;
