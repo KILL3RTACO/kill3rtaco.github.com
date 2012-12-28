@@ -93,18 +93,10 @@ table td{
 
 /* Wiki Rules */
 
-.wikibox{
-	width: 38%;
-}
-
-.wb_left{
+#wiki-sidebar{
+	height: 100%;
+	border-right: 1px solid #B91F1F;
 	float: left;
-	margin-left: 5%;
-}
-
-.wb_right{
-	float: left;
-	margin-left: 5%;
 }
 
 .wikibox p, .wikibox ul, .wikibox h2, .wikibox h3, .wikibox h4, .wikibox, h5, .wikibox h6{
