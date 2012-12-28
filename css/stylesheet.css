@@ -54,12 +54,6 @@ code{
 	font-family: 'Ubuntu mono';
 }
 
-.header{
-	margin-top: -22px;
-	margin-left: 2%;
-	margin-right: 2%;
-}
-
 table{
 	width: 96%;
 	margin: auto;
@@ -93,26 +87,12 @@ p:first-letter{
 	padding-left: 3%;
 }
 
-#wiki-toc{
-	display: inline-block;
+
+#wiki-toc .content{
 	margin-left: 2%;
 	padding-right: 2%;
 	padding-top: 1%;
 	padding-bottom: 1%;
-}
-
-.fixed{
-	position: fixed;
-	top: 2%;
-}
-
-.fancy {
-	display: block;
-	margin: auto;
-}
-
-.fancy a{
-	text-decoration: none;
 }
 
 .level-1{
