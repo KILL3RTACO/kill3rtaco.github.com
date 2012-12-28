@@ -160,7 +160,7 @@ p:first-letter{
 .box .content{
 	padding-left: 3%;
 	padding-right: 3%;
-	border: 1px solid #AAA;
+	border: 1px solid #B91F1F;
 	-webkit-border-bottom-right-radius: 15px;
 	-webkit-border-bottom-left-radius: 15px;;
 }
@@ -174,7 +174,7 @@ p:first-letter{
 	text-align: center;
 	background: #B91F1F;
 	color: #111;
-	border: 1px solid #AAA;
+	border: 1px solid #B91F1F;
 	border-bottom: none;
 	-webkit-border-top-right-radius: 15px;
 	-webkit-border-top-left-radius: 15px;
