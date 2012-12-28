@@ -19,7 +19,7 @@
 	padding:0px;
 	}
 #cssmenu li a{
-	background:#0F0F0F url('/images/cssmenu/seperator.gif') bottom right no-repeat;
+	background:#0F0F0F;
 	color:#cccccc;
 	display:block;
 	font-weight:normal;
@@ -52,7 +52,6 @@
 	
 	}
 #cssmenu li li {
-	background:url('/images/cssmenu/sub_sep.gif') bottom left no-repeat;
 	display:block;
 	float:none;
 	margin:0px;
