@@ -30,7 +30,7 @@
 	text-decoration:none;
 	}
 #cssmenu li a:hover, #cssmenu ul li:hover a{
-	background: #2580a2 url('/images/cssmenu/hover.gif') bottom center no-repeat;
+	background: #B91F1F;
 	color:#FFFFFF;
 	text-decoration:none;
 	}
@@ -73,7 +73,7 @@
 	text-align:left;
 	}
 #cssmenu li ul a:hover, #cssmenu li ul li:hover a{
-	background:#2580a2 url('/images/cssmenu/hover_sub.gif') center left no-repeat;
+	background:#B91F1F;
 	border:0px;
 	color:#ffffff;
 	text-decoration:none;
