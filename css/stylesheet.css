@@ -126,12 +126,12 @@ table td:nth-child(even){
 #wiki-sidebar{
 	height: 100%;
 	float: left;
-	padding: 1em;
+	padding: 0.5em;
 	width: 9.5em;
 }
 
 #wiki-content{
-	margin-left: 10em;
+	margin-left: 10.5em;
 	padding-left: 2em;
 	border-left: 1px solid #B91F1F;
 }
