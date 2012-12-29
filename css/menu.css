@@ -20,7 +20,7 @@
 	}
 #cssmenu li a{
 	background:#0F0F0F;
-	color:#cccccc;
+	color:#CCC;
 	display:block;
 	font-weight:normal;
 	line-height:35px;
@@ -31,7 +31,7 @@
 	}
 #cssmenu li a:hover, #cssmenu ul li:hover a{
 	background: #B91F1F;
-	color:#FFFFFF;
+	color:#FFF;
 	text-decoration:none;
 	}
 #cssmenu li ul{
