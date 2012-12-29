@@ -101,7 +101,8 @@ table td{
 
 #info-box{
 	margin-top: 2%;
-	padding: 2% 1%;
+	padding-top: 1%;
+	padding-bottom: 1%;
 	border: 1px solid #B91F1F;
 	-webkit-border-radius: 10px;
 	background: #0F0F0F;
