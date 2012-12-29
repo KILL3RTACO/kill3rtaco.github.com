@@ -55,7 +55,7 @@ table td{
 }
 
 table td:nth-child(even){
-	background-color: 0F0F0F;
+	background: 0F0F0F;
 }
 
 /* Main Rules */
