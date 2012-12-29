@@ -48,6 +48,7 @@ table{
 table th{
 	text-align: left;
 	color: #FFF;
+	background: #0F0F0F;
 	padding: 5px;
 	border: 1px solid #B91F1F;
 	-webkit-border-radius: 0.3em;
@@ -55,7 +56,6 @@ table th{
 
 table td{
 	vertical-align: top;
-	background: #0F0F0F;
 	color: #FFF;
 	padding: 5px;
 	border-bottom: 1px solid #B91F1F;
@@ -137,6 +137,10 @@ table td:nth-child(even){
 	padding-left: 1em;
 	padding-bottom: 5em;
 	border-left: 1px solid #B91F1F;
+}
+
+#wiki-main-content{
+	padding-bottom: 4em;
 }
 
 #wiki-footer{
