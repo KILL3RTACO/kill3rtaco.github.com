@@ -173,7 +173,7 @@ table tr:hover td:nth-child(even){
 }
 
 #wiki-toc .content{
-	padding: 1em 2em;
+	padding: 0.5em 1em;
 }
 
 .inline-code{
