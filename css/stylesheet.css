@@ -118,7 +118,7 @@ table td{
 	width: 9.5em;
 }
 
-#wiki-sidebar img:hover{
+#wiki-sidebar a img:hover{
 	border-bottom: 1px solid #AAA;
 }
 
