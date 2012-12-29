@@ -40,16 +40,16 @@ table{
 }
 
 table th{
-	color: #000;
+	color: #FFF;
 	padding: 5px;
+	border: 1px solid #B91F1F;
 	-webkit-border-radius: 0.3em;
 }
 
 table td{
-	color: #000;
+	color: #FFF;
 	padding: 5px;
 	border-bottom: 1px solid #B91F1F;
-	-webkit-border-radius: 0.3em;
 }
 
 /* Main Rules */
@@ -116,10 +116,6 @@ table td{
 	float: left;
 	padding: 0.5em;
 	width: 9.5em;
-}
-
-#wiki-sidebar a img:hover{
-	border-bottom: 1px solid #AAA;
 }
 
 #wiki-content{
