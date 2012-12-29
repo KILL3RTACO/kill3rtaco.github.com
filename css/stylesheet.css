@@ -177,7 +177,7 @@ table tr:hover td:nth-child(even){
 }
 
 .inline-code{
-	padding: 3px;
+	padding: 1px;
 	font-family: 'Ubuntu mono', monospace;
 	background: 1px solid 0A0A0A;
 	border: 1px solid #1A1A1A;
