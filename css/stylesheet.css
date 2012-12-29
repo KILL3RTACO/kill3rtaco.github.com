@@ -112,7 +112,7 @@ table td{
 	height: 100%;
 	border-right: 1px solid #B91F1F;
 	float: left;
-	padding: 2%;
+	padding: 0.5em;
 	width: 7em;
 }
 
