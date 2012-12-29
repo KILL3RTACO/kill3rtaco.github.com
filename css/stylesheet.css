@@ -132,7 +132,6 @@ table tr:hover td:nth-child(even){
 }
 
 #wiki-sidebar{
-	height: 100%;
 	float: left;
 	padding: 0.5em;
 	width: 9.5em;
