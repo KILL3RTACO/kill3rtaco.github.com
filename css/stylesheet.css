@@ -113,7 +113,6 @@ table td:nth-child(even){
 
 #info-box{
 	margin-top: 2%;
-	margin-right: 1em;
 	padding-top: 1%;
 	padding-bottom: 1%;
 	border: 1px solid #B91F1F;
@@ -132,9 +131,15 @@ table td:nth-child(even){
 
 #wiki-content{
 	margin-left: 11em;
+	margin-right: 1em;
 	padding-left: 1em;
 	padding-bottom: 5em;
 	border-left: 1px solid #B91F1F;
+}
+
+#wiki-main-content{
+	padding-bottom: 2em;
+	border-bottom: 1px solid #B91F1F;
 }
 
 .wikibox p, .wikibox ul, .wikibox h2, .wikibox h3, .wikibox h4, .wikibox, h5, .wikibox h6{
