@@ -55,6 +55,7 @@ table th{
 
 table td{
 	vertical-align: top;
+	background: #0F0F0F;
 	color: #FFF;
 	padding: 5px;
 	border-bottom: 1px solid #B91F1F;
@@ -138,9 +139,8 @@ table td:nth-child(even){
 	border-left: 1px solid #B91F1F;
 }
 
-#wiki-main-content{
-	padding-bottom: 4em;
-	border-bottom: 1px solid #B91F1F;
+#wiki-footer{
+	border-top: 1px solid #B91F1F;
 }
 
 .wikibox p, .wikibox ul, .wikibox h2, .wikibox h3, .wikibox h4, .wikibox, h5, .wikibox h6{
