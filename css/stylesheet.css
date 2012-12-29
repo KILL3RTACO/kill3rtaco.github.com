@@ -114,8 +114,8 @@ table td:nth-child(even){
 
 #info-box{
 	margin-top: 2%;
-	padding-top: 1em;
-	padding-bottom: 1em;
+	padding-top: 0.5m;
+	padding-bottom: 0.5em;
 	border: 1px solid #B91F1F;
 	-webkit-border-radius: 10px;
 	background: #0F0F0F;
