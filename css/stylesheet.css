@@ -9,6 +9,10 @@ html{
 	font-family: Ubuntu,'Trebuchet MS', sans-serif;
 }
 
+body{
+	margin: 0;
+}
+
 a:link, a:visited{
 	color: #59F;
 	text-decoration: none;
