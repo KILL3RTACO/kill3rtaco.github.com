@@ -204,6 +204,10 @@ table tr:hover td:nth-child(even){
 	padding-left: 3em;
 }
 
+.subpages{
+	font-size: 85%;
+}
+
 /* Info Page Rules */
 
 .stick{
