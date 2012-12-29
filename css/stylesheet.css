@@ -65,6 +65,14 @@ table td:nth-child(even){
 	background: #0F0F0F;
 }
 
+table tr:hover td{
+	background: #0A0A0A;
+}
+
+table tr:hover td:nth-child(even){
+	background: #1A1A1A;
+}
+
 /* Main Rules */
 
 .box{
@@ -146,6 +154,10 @@ table td:nth-child(even){
 
 #wiki-main-content{
 	padding-bottom: 4em;
+}
+
+#wiki-main-content h2{
+	border-bottom: 1px solid #757575;
 }
 
 #wiki-footer{
