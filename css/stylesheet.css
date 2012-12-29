@@ -208,6 +208,10 @@ table tr:hover td:nth-child(even){
 	font-size: 85%;
 }
 
+#first-heading{
+	text-align: left;
+}
+
 /* Info Page Rules */
 
 .stick{
