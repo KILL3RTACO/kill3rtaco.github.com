@@ -178,12 +178,11 @@ table tr:hover td:nth-child(even){
 	padding-bottom: 3%;
 }
 
-.wikibox h3{
-	border-bottom: 1px solid #AAA;
-}
-
 .inline-code{
 	font-family: 'Ubuntu mono', monospace;
+	background: 1px solid 0A0A0A;
+	border: 1px solid #1A1A1A;
+	-webkit-border-radius: 0.3em;
 }
 
 .spanblue{
