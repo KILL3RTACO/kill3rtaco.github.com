@@ -54,7 +54,7 @@ table td{
 	border-bottom: 1px solid #B91F1F;
 }
 
-.middle{
+table td:nth-child(even){
 	background-color: 0F0F0F;
 }
 
