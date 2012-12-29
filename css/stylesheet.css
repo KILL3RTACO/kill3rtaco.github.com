@@ -125,7 +125,6 @@ table td:nth-child(even){
 
 #wiki-sidebar{
 	height: 100%;
-	border-right: 1px solid #B91F1F;
 	float: left;
 	padding: 0.5em;
 	width: 9.5em;
@@ -134,6 +133,7 @@ table td:nth-child(even){
 #wiki-content{
 	margin-left: 10em;
 	padding-left: 2em;
+	border-left: 1px solid #B91F1F;
 }
 
 .wikibox p, .wikibox ul, .wikibox h2, .wikibox h3, .wikibox h4, .wikibox, h5, .wikibox h6{
