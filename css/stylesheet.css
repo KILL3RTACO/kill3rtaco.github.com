@@ -130,6 +130,11 @@ table td:nth-child(even){
 	width: 9.5em;
 }
 
+#wiki-sidebar-links{
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
 #wiki-content{
 	margin-left: 11em;
 	margin-right: 1em;
