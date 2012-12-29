@@ -33,6 +33,8 @@ h1{
 	text-align: center;
 }
 
+/* Table Rules */
+
 table{
 	width: 96%;
 	padding-left: 2%;
@@ -50,6 +52,10 @@ table td{
 	color: #FFF;
 	padding: 5px;
 	border-bottom: 1px solid #B91F1F;
+}
+
+.middle{
+	background-color: 0F0F0F;
 }
 
 /* Main Rules */
