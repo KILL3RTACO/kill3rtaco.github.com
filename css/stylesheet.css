@@ -100,7 +100,7 @@ table td{
 }
 
 #info-box{
-	margin: 2% 2% 2%;
+	margin-top: 2%;
 	padding: 2% 1%;
 	border: 1px solid #B91F1F;
 	-webkit-border-radius: 10px;
