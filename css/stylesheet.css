@@ -118,6 +118,10 @@ table td{
 	width: 9.5em;
 }
 
+#wiki-sidebar img:hover{
+	border-bottom: 1px solid #AAA;
+}
+
 #wiki-content{
 	margin-left: 10em;
 	padding-left: 2em;
