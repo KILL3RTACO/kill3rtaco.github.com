@@ -133,6 +133,7 @@ table td:nth-child(even){
 #wiki-content{
 	margin-left: 11em;
 	padding-left: 1em;
+	padding-bottom: 5em;
 	border-left: 1px solid #B91F1F;
 }
 
