@@ -144,9 +144,6 @@ table tr:hover td:nth-child(even){
 
 .wiki-links{
 	list-style-type: none;
-}
-
-.wiki-links li{
 	padding-left: -2em;
 }
 
