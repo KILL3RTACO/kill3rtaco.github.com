@@ -142,6 +142,10 @@ table tr:hover td:nth-child(even){
 	margin-right: 1em;
 }
 
+.wiki-lines{
+	padding-left: 0.5em;
+}
+
 #wiki-content{
 	margin-left: 11em;
 	margin-right: 1em;
