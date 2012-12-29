@@ -42,6 +42,7 @@ table{
 }
 
 table th{
+	text-align: left;
 	color: #FFF;
 	padding: 5px;
 	border: 1px solid #B91F1F;
@@ -49,6 +50,7 @@ table th{
 }
 
 table td{
+	vertical-aligh: top;
 	color: #FFF;
 	padding: 5px;
 	border-bottom: 1px solid #B91F1F;
