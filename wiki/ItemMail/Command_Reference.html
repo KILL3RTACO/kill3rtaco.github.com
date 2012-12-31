@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Taco - Home</title>
+		<title>TacoWiki</title>
 		<link rel='shortcut icon' href='/images/favicon/tacobukkit.png' type='image/png'/>
 		<link href='/css/stylesheet.css' rel='stylesheet' type='text/css'/>
-		<link href='/css/menu.css' rel='stylesheet' type='text/css'/>
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 		<script type='text/javascript' src='/js/smooth-scroll.js'></script>
@@ -25,35 +24,63 @@
 		</script>
 	</head>
 	<body>
-		<h1>Mods by Taco</h1>
-		<div id='cssmenu'>
-			<ul>
-				<li><a href='/'>Home</a></li>
-				<li><a href='/projects'>Projects</a>
-					<ul>
-						<li><a href='/projects/itemmail'>ItemMail</a></li>
-						<li><a href='/projects/mineopoly'>Mineopoly</a></li>
-						<li><a href='/projects/tacoapi'>TacoAPI</a></li>
-						<li><a href='/projects/ideas'>Ideas</a></li>
-					</ul>
-				</li>
-				<li><a href='/wiki'>Wiki</a></li>
-				<li><a href='/tutorials'>Tutorials</a>
-					<ul>
-						<li><a href='/tutorials/tacoapi'>TacoAPI</a></li>
-					</ul>
-				</li>
-				<li><a href='/funstuff'>Fun Stuff</a></li>
-				<li><a href='/downloads'>Downloads</a></li>
-				<li><a href='http://dev.bukkit.org/profiles/KILL3RTACO'>BukkitDev</a></li>
-			</ul>
-		</div>
-		<div id='main' class='box'>
-			<div class='top'>
-				<h2 id='Welcome'>Welcome!</h2>
+		<div id='wiki-sidebar'>
+			<a href='/wiki' title='Go to the main page'>
+				<img src='/images/favicon/tacobukkit.png' style='display: block; margin: auto'/>
+			</a><br/>
+			<div id='wiki-sidebar-links'>
+				<h1 style='margin-top: 0'>WIKI</h1>
+				<p>
+					<a class='border-below' href='/wiki'>Main page</a>
+				</p>
+				<p>
+					Projects
+				</p>
+				<p class='wiki-links'>
+					<a href='/wiki/ItemMail'>ItemMail</a><br/>
+					<a href='/wiki/TacoAPI'>TacoAPI</a>
+				</p>
 			</div>
-			<div class='content'>
-				
+		</div>
+		<div id='wiki-content'>
+			<div id='wiki-main-content'>
+				<h2>Commands</h2>
+				<p>
+					<b>Note</b>: <i>A</i> subcommand <i> is the second 'word' when writing out the command. For instance,
+					if the command you write out was</i> <span class='inline-code'>/im send kill3rtaco diamond5 </span>, then
+					the subcommand would be <span class='inline-code'>send</span>
+				</p>
+				<table>
+					<tr>
+						<th>Subcommand</th>
+						<th>Parameters</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>send</td>
+						<td>&lt;player&gt; [item:damage] [amount]</td>
+						<td>Sends mail to another player.</td>
+					</tr>
+					<tr>
+						<td>open</td>
+						<td>[#]</td>
+						<td>Opens the specified mail. The last mail sent to you will be opened if unspecified.</td>
+					</tr>
+					<tr>
+						<td>delete</td>
+						<td>[#]</td>
+						<td>Deletes the specified mail. The last mmail sent to you will be deleted if unspecified.</td>
+					</tr>
+				</table>
+			</div>
+			<div id='wiki-footer'>
+				<p>
+					Wiki design inspired by <a href='//wiki.sk89q.com/wiki/Main_Page'>SK's Wiki</a>
+				</p>
+				<p>
+					(sk89q is the maker of some popular plugins such as <a href='//dev.bukkit.org/server-mods/worldedit'>WorldEdit</a> and
+					<a href='//dev.bukkit.org/server-mods/worldgaurd'>WorldGaurd</a>)
+				</p>
 			</div>
 		</div>
 	</body>
