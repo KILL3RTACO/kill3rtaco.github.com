@@ -193,6 +193,7 @@ table tr:hover td:nth-child(even){
 }
 
 .inline-code{
+	display: inline-block;
 	padding: 1px;
 	font-family: 'Ubuntu mono', monospace;
 	background: 1px solid 0A0A0A;
