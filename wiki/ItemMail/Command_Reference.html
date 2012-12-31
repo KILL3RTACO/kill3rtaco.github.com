@@ -71,11 +71,28 @@
 					</tr>
 					<tr>
 						<td>delete</td>
-						<td>[#]</td>
-						<td>Deletes the specified mail. The last mmail sent to you will be deleted if unspecified.</td>
+						<td>[#/*]</td>
+						<td>Deletes the specified mail. The last mail sent to you will be deleted if unspecified. If
+						an asterisk is used, all mail will be deleted</td>
 					</tr>
 					<tr>
 						<th colspan='3' class='spancols'>Requests</th>
+					</tr>
+					<tr>
+						<td>request</td>
+						<td>&lt;player&gt; [item] [amount]</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>accept</td>
+						<td>[#]</td>
+						<td>Accepts the specified request, or the last one if undefined.</td>
+					</tr>
+					<tr>
+						<td>decline</td>
+						<td>[#/*]</td>
+						<td>Declines the specified request or the last one if undefined. If an asterisk is used, then all requests
+						will be declined.</td>
 					</tr>
 				</table>
 			</div>
