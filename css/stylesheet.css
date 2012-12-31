@@ -72,6 +72,12 @@ table tr:hover td:nth-child(even){
 	background: #1A1A1A;
 }
 
+.spancols{
+	background-color: #3A3A3A;
+	color: #FFF;
+	text-align: center;
+}
+
 /* Main Rules */
 
 .box{
@@ -192,12 +198,6 @@ table tr:hover td:nth-child(even){
 	background: 1px solid 0A0A0A;
 	border: 1px solid #1A1A1A;
 	-webkit-border-radius: 0.3em;
-}
-
-.spanblue{
-	background-color: #0BF;
-	color: #000;
-	text-align: center;
 }
 
 .planned{
