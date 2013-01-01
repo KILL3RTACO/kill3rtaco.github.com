@@ -76,6 +76,7 @@ table tr:hover td:nth-child(even){
 	background-color: #3A3A3A;
 	color: #FFF;
 	text-align: center;
+	border-top: none;
 }
 
 /* Main Rules */
