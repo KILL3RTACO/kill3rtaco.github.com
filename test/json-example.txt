@@ -7,6 +7,9 @@
 					"capital": false,
 					"mayor": "Pescotti",
 					"assistants": ["bokanella", "Stephfork", "KILL3RTACO", "iSquared"],
+				},
+				"Valencia": {
+				
 				}
 			}
 		}
