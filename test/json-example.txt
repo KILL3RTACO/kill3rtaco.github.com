@@ -1,0 +1,14 @@
+{
+	"kingdoms": {
+		"Ghaldean": {
+			"king": "Vershye",
+			"towns": {
+				"Vesis":{
+					"capital": false,
+					"mayor": "Pescotti",
+					"assistants": ["bokanella", "Stephfork", "KILL3RTACO", "iSquared"],
+				}
+			}
+		}
+	}
+}
