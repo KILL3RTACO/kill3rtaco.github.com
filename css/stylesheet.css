@@ -269,14 +269,10 @@ table tr:hover td:nth-child(even){
 	display: none;
 }
 
-::-webkit-scrollbar-track:vertical {
-	background-color: transparent;
-}
-
-::-webkit-scrollbar-track-piece  {
-	background-color: #3b3b3b;
-}
-
 ::-webkit-scrollbar-thumb:vertical {
 	background-color: #666;
+}
+
+::-webkit-scrollbar-thumb:vertical:hover {
+	background-color: #FFF;
 }
