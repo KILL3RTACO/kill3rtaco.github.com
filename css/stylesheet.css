@@ -274,5 +274,5 @@ table tr:hover td:nth-child(even){
 }
 
 ::-webkit-scrollbar-thumb:vertical:hover {
-	background-color: #222;
+	background-color: #666;
 }
