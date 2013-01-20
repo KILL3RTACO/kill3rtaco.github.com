@@ -270,9 +270,9 @@ table tr:hover td:nth-child(even){
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-	background-color: #666;
+	background-color: #1F1F1F;
 }
 
 ::-webkit-scrollbar-thumb:vertical:hover {
-	background-color: #FFF;
+	background-color: #222;
 }
