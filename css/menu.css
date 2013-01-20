@@ -33,6 +33,10 @@
 	background: #B91F1F;
 	color:#FFF;
 	text-decoration:none;
+	-webkit-transition: .3s all ease;
+	   -moz-transition: .3s all ease;
+	     -o-transition: .3s all ease;
+	        transition: .3s all ease;
 	}
 #cssmenu li ul{
 	background:#0F0F0F;
@@ -76,6 +80,10 @@
 	border:0px;
 	color:#FFF;
 	text-decoration:none;
+	-webkit-transition: .3s all ease;
+	   -moz-transition: .3s all ease;
+	     -o-transition: .3s all ease;
+	        transition: .3s all ease;
 	}
 #cssmenu p{
 	clear:left;
